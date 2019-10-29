@@ -40,10 +40,6 @@ GEM
       execjs
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.3.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -112,7 +108,6 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.21.0)
-    popper_js (1.14.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -187,12 +182,6 @@ GEM
       tilt (>= 1.1, < 3)
     sassc (2.2.1)
       ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -226,7 +215,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.3.1)
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
