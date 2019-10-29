@@ -3,6 +3,7 @@
     Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
+		Edited by: CS 169 Group 9
 */
 
 /*
@@ -492,128 +493,6 @@ section.inner {
 section#about {
 	background:#f2f2f2;
 }
-
-/* === Contact section === */
-
-
-/* Contact Form */
-
-.validation {
-    color: red;
-    display:none;
-    margin: 0 0 20px;
-    font-weight:400;
-    font-size:13px;
-}
-
-#sendmessage {
-    color: green;
-    border:1px solid green;
-    display:none;
-    text-align:center;
-    padding:15px;
-    font-weight:600;
-    margin-bottom:15px;
-    background: #fff;
-}
-
-#errormessage {
-    color: red;
-    display:none;
-    border:1px solid red;
-    text-align:center;
-    padding:15px;
-    font-weight:600;
-    margin-bottom:15px;
-    background: #fff;
-}
-
-#sendmessage.show, #errormessage.show, .show {
-	display:block;
-}
-
-#contact-form {
-	position: relative;
-	z-index: 999;
-}
-
-#contact-form input[type=text], .contactForm textarea {
-	background: rgba(227, 231, 228, 1);
-	font-family: 'Open Sans', sans serif;
-	border: 0;
-	font-size:16px;
-	text-align: left;
-	vertical-align: middle;
-}
-
-.contactForm textarea {
-	height: 156px;
-}
-
-#contact-form input[type=text]:focus, .contactForm textarea:focus {
-	background: #fff;
-	color: #555;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	transition: background 0.25 ease-in;
-	-moz-transition: background 0.25 ease-in;
-	-webkit-transition: background 0.25 ease-in;
-}
-#contact-form input[type=text] {
-	height: 60px;
-	margin-bottom:30px;
-}
-#contact-form input[type=submit] {
-	color: #fff;
-	width: 185px;
-	height: 60px;
-	text-shadow: none;
-	font-size: 16px;
-	padding:0.5em;
-	letter-spacing: 0.05em;
-	margin: 0 0 20px 0;
-	display: block;
-	border: 0;
-	text-transform: none;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-}
-#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
-	background: #43413e !important;
-}
-#contact-form textarea {
-	padding-top: 1em;
-}
-div.cform-response-output {
-	max-width: 60%;
-	text-align: center;
-	margin-left: 40% !important;
-	margin-top: 0.5em !important;
-	padding: 0.5em !important;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-.cform-not-valid-tip {
-	color: #888;
-	border: 1px dotted #ad3729 !important;
-	width: 100% !important;
-	left: 0 !important;
-	padding: 0.5em !important;
-	font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-
 
 
 /* =========================================================
@@ -1172,6 +1051,7 @@ i.icon-white {
 	height: auto;
 }
 
+
 /* =========================================================
 09. Media queries
 ============================================================ */
@@ -1284,12 +1164,4 @@ i.icon-white {
  display: block;
 }
 
-
-/* Contact Form */
-	#contact-form {
-		overflow: hidden;
-	}
-	#contact-form input[type=submit] {
-		width: 100%;
-	}
 }
