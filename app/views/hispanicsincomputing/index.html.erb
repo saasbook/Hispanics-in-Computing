@@ -1,2 +1,169 @@
-<h1>Hispanicsincomputing#index</h1>
-<p>Find me in app/views/hispanicsincomputing/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hispanics in Computing</title>
+    <%= stylesheet_link_tag "theme-css/bootstrap-responsive" %>
+    <%= stylesheet_link_tag "theme-css/style" %>
+    <%= stylesheet_link_tag "theme-css/default" %>
+</head>
+<body>
+  <!-- navbar -->
+  <div class="navbar-wrapper">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- Responsive navbar -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+        </a>
+          <h1 class="brand"><a href=".">Hispanics in Computing</a></h1>
+          <!-- navigation -->
+          <nav class="nav-collapse">
+            <ul id="menu-main" class="nav">
+              <li><a href="#about">About</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#connect">Connect</a></li>
+              <li class="nav-item active">
+                <a class="nav-link" href="<%= members_path %>">Members</a>
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tapia conference
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to "Tapia 2018", conference_2018_path %></li>
+                      <li><%= link_to "Tapia 2017", conference_2017_path %></li>
+                      <li><%= link_to "Tapia 2016", conference_2016_path %></li>
+                      <li><%= link_to "Tapia 2013", conference_2013_path %></li>
+                    </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header area -->
+  <div class="container" id="header-container">
+    <%= image_tag("2018.jpg", :alt => "Tapia 2018", :classes => "img-responsive") %>
+    <p>
+      Tapia Conference 2018
+    </p>
+  </div>
+  <!-- section: about -->
+  <section id="about" class="section">
+    <div class="container">
+      <h4>Who We Are</h4>
+      <div class="row-fluid">
+        <div class="span">
+          <div>
+            <p>
+              We are a group of Latinx/Hispanics that are interested or work in computing. <br>
+              Our group includes industry representatives, faculty, researchers, students, and others.
+            </p>
+            <h1>The sole purpose of our group is to serve as mentors and sponsors <br>
+              for other Latinx/Hispanics interested in computing.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- end section: about -->
+  <!-- section: events -->
+  <section id="events" class="section">
+    <div class="container">
+      <h4>Upcoming Events</h4>
+      <div class="row-fluid">
+        <div class="span">
+          <p>
+            We will have our annual gathering at the Tapia Conference in San Diego on, join us?
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="span4 offset1">
+            <p>
+              <strong>BOF:</strong> <a href="http://tapiaconference.org/schedule/
+              thursday-september-19-2019/300pm-400pm/hispanics-in-computing-community/"
+              > Hispanics in Computing Community</a><br>
+              <strong>Date:</strong> Thursday, September 19, 2019 <br>
+              <strong>Time:</strong> 3:00PM - 4:00PM <br>
+              <strong>Location:</strong> San Diego A <br>
+            </p>
+        </div>
+        <div class="span6">
+          <p>
+            <strong>Presenters:</strong> Patricia Ordóñez, University of Puerto Rico Río Piedras<br>
+            Nery Chapetón-Lamas, MiraCosta College<br>
+            Juan F. Sequeda, Capsenta<br>
+            Brianna Posadas, University of Florida<br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+			<div class="row">
+				<div class="span">
+					<blockquote class="small">
+						<strong> Abstract: </strong> The Hispanics in Computing community was
+            founded a few
+            months before the Tapia 2009 Conference. Since then, the group
+            has been meeting at this annual conference. The group has grown
+            in numbers and online presence (
+            <a href="https://www.facebook.com/groups/HispanicsInComputing/"
+            target="_blank">Facebook
+            </a>,<a href="https://www.linkedin.com/groups/6962622"
+            target="_blank"> LinkedIn </a>, and
+            <a href="#">http://www.hispanicsincomputing.com/</a>). The impact of this
+            gathering in our community has been tremendous. Several members
+            of the community that attended our BoF as young graduate students
+             are now in tenure track positions or employed in research organizations.
+             Once again, we propose to hold our annual BoF at the Tapia Conference.
+             The gathering will allow many of us to meet face to face and discuss
+             issues facing Hispanics. As the undergraduate population attending
+             Tapia grows, it is important to serve as mentors for the new students
+             starting their careers in computing. The goal for this year’s gathering
+             is to explore how to do virtual mentoring to help increase ties within
+             the community.
+					</blockquote>
+				</div>
+			</div>
+		</div>
+  </section>
+  <!-- end section: events -->
+  <footer id="connect">
+    <div class="container">
+      <h4>Connect with us</h4>
+      <div class="row">
+        <div class="span6 offset3">
+          <ul class="social-networks">
+            <li><a href="https://www.linkedin.com/groups/6962622" target="_blank">
+              <i class="icon-circled icon-bgdark icon-linkedin icon-2x"></i></a></li>
+            <li><a href="https://www.facebook.com/groups/HispanicsInComputing/" target="_blank">
+              <i class="icon-circled icon-bgdark icon-facebook icon-2x"></i></a></li>
+            <li><a href="https://twitter.com/HispanicsInComp" target="_blank">
+              <i class="icon-circled icon-bgdark icon-twitter icon-2x"></i></a></li>
+            <li><a href="http://hispanicsincomputing.org/mailman/listinfo/members_hispanicsincomputing.org"
+               target="_blank">
+              <i class="icon-circled icon-bgdark icon-envelope icon-2x"></i></a></li>
+          </ul>
+          <p class="copyright">
+            &copy; Hispanics in Computing 2014-today
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- ./container -->
+  </footer>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery.nav" %>
+  <%= javascript_include_tag "bootstrap" %>
+  <%= javascript_include_tag "custom" %>
+</body>
+</html>
