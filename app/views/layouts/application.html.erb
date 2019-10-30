@@ -27,8 +27,19 @@
               <li><a href="#about">About</a></li>
               <li><a href="#events">Events</a></li>
               <li><a href="#connect">Connect</a></li>
-              <li><a href="#">Tapia</a></li>
               <li><a href="#">Members</a></li>
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tapia conference
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to "Tapia 2018", conference_2018_path %></li>
+                      <li><%= link_to "Tapia 2017", conference_2017_path %></li>
+                      <li><%= link_to "Tapia 2016", conference_2016_path %></li>
+                      <li><%= link_to "Tapia 2013", conference_2013_path %></li>
+                    </ul>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
