@@ -15,6 +15,10 @@ ul#menu-main > li > a:hover {
 	color: #ffff00;
 }
 
+.nav-tapia:hover {
+	color: #ffff00;
+}
+
 
 ul#menu-main > li > a:focus,ul#menu-main > li > a:active, ul#menu-main > li > a.selected, ul#menu-main li a.selected:active    {
 	color: #ffff00;
