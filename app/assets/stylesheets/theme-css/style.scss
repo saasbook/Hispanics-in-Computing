@@ -331,8 +331,42 @@ ul#menu-main > li > a:focus {
 	outline:0;
 }
 
+.nav-outer-tapia {
+	padding: 9px 15px 10px;
+}
+
+.nav-tapia {
+	color: white;
+	font-weight: 600;
+	font-size:14px;
+	text-transform:uppercase;
+	text-decoration: none;
+}
+.nav-tapia:hover {
+	text-decoration: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.nav-tapia a:visited, a:active, a:focus {
+	text-decoration: none;
+	color: white;
+}
+
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
 	text-shadow: none;
+}
+
+ul#tapia-menu > li > a {
+	color: white;
+	font-weight: 600;
+	font-size:14px;
+	background-color: black;
+}
+
+ul#tapia-menu > li > a:hover {
+	background-color: #ffff00;
+	color: black;
 }
 
 
@@ -493,6 +527,25 @@ section.inner {
 section#about {
 	background:#f2f2f2;
 }
+
+
+/* === section about === */
+
+section#members {
+  text-align: center;
+}
+
+section#members > .login-wrapper {
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	padding: 50px 30px;
+	width: 90%;
+	max-width: 470px;
+	position: relative;
+	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
 
 
 /* =========================================================
@@ -1123,27 +1176,12 @@ i.icon-white {
 		text-align:center;
 		width:100%;
 	}
-	#portfolio-wrap .grid {
-		width: 25%;
-	}
 }
 
     /* Smaller screens ----------- */
 @media (max-width : 480px) {
 	#header-wrapper {
 		padding-top:80px;
-	}
-
-	#team .team-thumb {
-		 margin-right: auto;
-		 margin-left: auto;
-		 width: 150px;
-		 display: block;
-		 text-align:center;
-	}
-
-	#portfolio-wrap .grid {
-		width: 50%;
 	}
 
 }
