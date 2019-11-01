@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,13 +7,6 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  resources :linkedin
-  get '/linkedin_profile' => "linkedin#linkedin_profile"
-  get '/oauth_account' => "linkedin#oauth_account"
-  get '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
-  post '/oauth_account' => "linkedin#oauth_account"
-  post '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
-
   get 'members', to: 'hispanicsincomputing#members'
 
   get  'tapia2018'   => 'hispanicsincomputing#tapia_2018',  :as => 'conference_2018'
