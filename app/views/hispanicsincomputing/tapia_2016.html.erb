@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
     <title>Tapia 2016</title>
   </head>
-  <body>
-      Tapia 2016: ADD CONTENT HERE
+  <body class="tapia">
+    <!-- Header area -->
+   <div class="container">
+      <h1>Tapia 2016, Austin, TX</h1>
+      <%= image_tag("tapia-2016/2016.jpg", :alt => "Attendees at the 2016 Tapia Conference", :classes => "img-responsive") %>
+    </div>
+
+    <!-- Videos Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h3>Las Banderas…</h3>
+        <iframe src="https://www.youtube.com/embed/hmoWxLrVp1g" allow="autoplay; encrypted-media" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+      </div>
+    </section>
   </body>
 </html>
