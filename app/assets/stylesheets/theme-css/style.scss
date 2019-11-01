@@ -69,6 +69,11 @@ body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 
+/* Padding for body elements on Tapia pages */
+body.tapia { 
+	padding-top: 100px;
+}
+
 ::-moz-selection {
 	color:#333;
 }
@@ -488,7 +493,6 @@ header .logo {
 	background: #43413e !important;
 }
 
-
 section.section {
 	padding: 50px 0 30px;
 }
@@ -545,8 +549,6 @@ section#members > .login-wrapper {
 	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
-
-
 
 /* =========================================================
 06. Footer
