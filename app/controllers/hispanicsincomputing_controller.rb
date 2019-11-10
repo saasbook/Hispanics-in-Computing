@@ -3,6 +3,10 @@ class HispanicsincomputingController < ApplicationController
   end
 
   def members
+  end
+
+  def create
+    render text: request.env['omniauth.auth'].to_yaml
   end 
 
   def tapia_2018
