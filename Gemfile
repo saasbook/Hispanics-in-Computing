@@ -40,6 +40,8 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels' # basic imperative step defs
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3', '< 1.4'
