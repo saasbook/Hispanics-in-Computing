@@ -69,8 +69,13 @@ body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 
+/* Padding for body elements on map */
+body.map { 
+	padding-top: 100px;
+}
+
 /* Padding for body elements on Tapia pages */
-body.tapia { 
+body.tapia {
 	padding-top: 100px;
 }
 
