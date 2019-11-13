@@ -70,7 +70,7 @@ body {
 }
 
 /* Padding for body elements on Tapia pages */
-body.tapia { 
+body.tapia {
 	padding-top: 100px;
 }
 
@@ -550,6 +550,20 @@ section#members > .login-wrapper {
 	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 }
 
+section#posts {
+  text-align: center;
+}
+// TODO > .login-wrapper may need to be changed
+section#posts > .login-wrapper {
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	padding: 50px 30px;
+	width: 90%;
+	max-width: 470px;
+	position: relative;
+	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
 /* =========================================================
 06. Footer
 ============================================================ */

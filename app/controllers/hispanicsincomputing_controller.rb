@@ -7,7 +7,7 @@ class HispanicsincomputingController < ApplicationController
 
   def create
     render text: request.env['omniauth.auth'].to_yaml
-  end 
+  end
 
   def tapia_2018
   end
@@ -19,5 +19,8 @@ class HispanicsincomputingController < ApplicationController
   end
 
   def tapia_2013
+  end
+
+  def modify_data
   end
 end

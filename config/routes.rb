@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   get  'tapia2016'   => 'hispanicsincomputing#tapia_2016',  :as => 'conference_2016'
   get  'tapia2013'   => 'hispanicsincomputing#tapia_2013',  :as => 'conference_2013'
 
+  # "csvtest" should be replaced with reall path name
+  get  'csvtest'   => 'posts#new'
+  post  'new_info'  => 'posts#create'
+  get 'members_data' => 'posts#all_data'
+
   get '/auth/:provider/callback', to: 'hispanicsincomputing#create'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
