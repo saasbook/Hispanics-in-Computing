@@ -16,8 +16,7 @@ Rails.application.routes.draw do
 
   # "csvtest" should be replaced with reall path name
   get  'csvtest'   => 'posts#new'
-  post  'new_info'  => 'posts#create'
-  get 'members_data' => 'posts#all_data'
+  post  'new_info'  => 'posts#save'
 
   get '/auth/:provider/callback', to: 'hispanicsincomputing#create'
   # Example of named route that can be invoked with purchase_url(id: product.id)
