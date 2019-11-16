@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <title>Interactive Members Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <%= stylesheet_link_tag "map" %>
     <meta name="viewport" content="initial-scale=1.0">
           <meta charset="utf-8">
           <style>
@@ -25,13 +27,14 @@
    <div class="header">
       <h1 style="text-align:center">Interactive Members Map</h1>
    </div>
+   <h2 style="text-align:center">Google</h2>
    <div id="map">
       <script>
         var map;
         function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.397, lng: -95.644},
-            zoom: 5
+            center: {lat: 37.871758, lng:  -122.260929},
+            zoom: 7
           });
           var marker = new google.maps.Marker({
           position: {lat: 37.87, lng: -122.2},
@@ -44,5 +47,13 @@
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjzhveAf1kUT9y-9pCEz9nneARu8sKQ6E&callback=initMap"
       async defer></script>
    </div>
+   <div id="map-container">
+     <h2 style="text-align:center">OSM/Leaflet</h2>
+     <div id="leaflet-map">
+
+      </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+  <%= javascript_include_tag "map" %>
   </body>
 </html>
