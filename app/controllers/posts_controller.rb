@@ -5,10 +5,12 @@ class PostsController < ApplicationController
   end
 
   def save
-    @firstname = params[:firstname]
-    @lastname = params[:lastname]
+    @name = params[:name]
+    @email = params[:email]
     @location = params[:location]
+    @country_of_origin = params[:country_of_origin]
+
+    user = User.create(:name => @name,:email => @email,:location => @location,:country_of_origin => @country_of_origin)
+
   end
-
-
 end

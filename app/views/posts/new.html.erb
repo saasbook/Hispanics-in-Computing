@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
-<body>
-<section id="posts" class="section">
-  <!-- use login-wrapper style for testing -->
-  <div class="container login-wrapper">
+<form action="/new_info" method = "post">
+  <section id="posts" class="section">
+    <div class="container">
 
-    <h4>Add Information</h4>
-    <form action="/new_info" method = "post">
-      First name:<br>
-      <input type="text" name="firstname" placeholder='Enter your first name' ><br>
-      Last name:<br>
-      <input type="text" name="lastname" placeholder='Enter your last name'><br>
-      Location:<br>
-      <input type="text" name="location" placeholder='Enter your location'><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</section>
-</body>
-</html>
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" name="name" placeholder="Enter name">
+      </div><br>
+      <div class="form-group">
+        <label>Email address</label>
+        <input  class="form-control" name="email"  placeholder="Enter email">
+      </div><br>
+      <div class="form-group">
+        <label>Location</label>
+        <input class="form-control" name="location"  placeholder="Enter location">
+      </div><br>
+      <div class="form-group">
+        <label>Country of origin</label>
+        <input class="form-control" name="country_of_origin" placeholder="Enter country of origin">
+      </div><br>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </section>
+</form>
