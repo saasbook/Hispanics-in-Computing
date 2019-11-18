@@ -101,6 +101,7 @@ GEM
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     formatador (0.2.5)
+    geocoder (1.5.2)
     gherkin (5.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -296,6 +297,7 @@ DEPENDENCIES
   cucumber-rails
   cucumber-rails-training-wheels
   font-awesome-rails
+  geocoder
   gon
   guard-rspec
   jbuilder (~> 2.0)

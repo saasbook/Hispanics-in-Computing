@@ -25,9 +25,12 @@ class HispanicsincomputingController < ApplicationController
   end
 
   def map
-    @first_user = User.first
-    gon.first_user = @first_user
     gon.all_users = User.all
+    @locations = []
+    User.all.each do |user|
+      @locations << Geocoder.search(user.location).first.coordinates
+    end
+    gon.locations = @locations
   end
 
 end

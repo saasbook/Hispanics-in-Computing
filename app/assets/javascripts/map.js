@@ -8,10 +8,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
      id: 'shalandy',
      accessToken: 'pk.eyJ1Ijoic2hhbGFuZHkiLCJhIjoiY2syNHoxaHhsMDE2YzNlbjNpNTBueml3diJ9.zrIOoG7uEkskPY2icMP01w',
  }).addTo(mymap);
- // var marker1 = L.marker([37.5383, -121.953]).addTo(mymap);
- // marker1.bindPopup("<b>Shalandy Zhang 🇨🇳</b><br>About: CS Student @UC Berkeley<br>Contact: shalandy@berkeley.edu").openPopup();
   for (var i = 0; i < gon.all_users.length; i++) {
-    var marker = L.marker([37.58+i, -121.953]).addTo(mymap);
+    var location = gon.locations[i];
+    var marker = L.marker(location).addTo(mymap);
     p = document.createElement("p");
     p.innerHTML = gon.all_users[i].name;
     marker.bindPopup(p).openPopup();
