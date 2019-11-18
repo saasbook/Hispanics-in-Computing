@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get  'tapia2016'   => 'hispanicsincomputing#tapia_2016',  :as => 'conference_2016'
   get  'tapia2013'   => 'hispanicsincomputing#tapia_2013',  :as => 'conference_2013'
 
-  # "csvtest" should be replaced with reall path name
-  get  'csvtest'   => 'posts#new'
+
+  get  'add_info'   => 'posts#new'
   post  'new_info'  => 'posts#save'
 
   get '/auth/:provider/callback', to: 'hispanicsincomputing#create'
