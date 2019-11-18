@@ -4,6 +4,7 @@
     <title>Interactive Members Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <%= stylesheet_link_tag "map" %>
+    <%= include_gon(:init => true) %>
     <meta name="viewport" content="initial-scale=1.0">
           <meta charset="utf-8">
           <style>
@@ -49,9 +50,7 @@
    </div>
    <div id="map-container">
      <h2 style="text-align:center">OSM/Leaflet</h2>
-     <div id="leaflet-map">
-
-      </div>
+     <div id="leaflet-map"></div>
   </div>
   <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
   <%= javascript_include_tag "map" %>

@@ -23,4 +23,11 @@ class HispanicsincomputingController < ApplicationController
 
   def modify_data
   end
+
+  def map
+    @first_user = User.first
+    gon.first_user = @first_user
+    gon.all_users = User.all
+  end
+
 end

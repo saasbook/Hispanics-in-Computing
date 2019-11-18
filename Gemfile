@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # for interactive map
 gem 'leaflet-rails'
+gem 'gon' 
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
