@@ -45,7 +45,9 @@
                 <a class="nav-link" href="<%= members_path %>">Members</a>
               </li>
               <li >
-                <a class="nav-link" href="<%= add_info_path %>">Add Information</a>
+                <% if current_user %>
+                  <a class="nav-link" href="<%= add_info_path %>">Add Information</a>
+                <% end %>
               </li>
             </ul>
           </nav>
