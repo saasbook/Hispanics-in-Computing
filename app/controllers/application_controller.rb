@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   	# TODO: change token when we get the Hispanics in Computing slack
   	token = "xoxp-831541929522-831551475954-846883798502-80a37aeb89849a27761cbd6bacd65792"
   	mambers = JSON.parse(open("https://slack.com/api/users.list?token=" + token).read)['members']
-  	if mambers
+		if mambers
       	mambers.each do |member|
         	@slack_member_emails.push(member['profile']['email'])
       	end
