@@ -171,8 +171,10 @@ GEM
     omniauth (1.9.0)
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
-    omniauth-linkedin-oauth2 (1.0.0)
-      omniauth-oauth2
+    omniauth-google-oauth2 (0.8.0)
+      jwt (>= 2.0)
+      omniauth (>= 1.1.1)
+      omniauth-oauth2 (>= 1.6)
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
@@ -303,7 +305,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   leaflet-rails
-  omniauth-linkedin-oauth2
+  omniauth-google-oauth2
   pg (~> 0.21)
   rails (= 4.2.10)
   rails_12factor
@@ -317,4 +319,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.17.3
+   2.0.2
