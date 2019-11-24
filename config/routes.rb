@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get  'add_info'   => 'posts#new'
   post  'new_info'  => 'posts#save'
 
-  get '/auth/:provider/callback', to: 'hispanicsincomputing#create'
+  get 'auth/google/callback' => 'sessions#create'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
