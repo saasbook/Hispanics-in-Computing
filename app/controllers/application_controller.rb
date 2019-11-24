@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
       	mambers.each do |member|
         	@slack_member_emails.push(member['profile']['email'])
       	end
-	end
-	return @slack_member_emails 
+	  end
+	  return @slack_member_emails 
+  end
 end
