@@ -7,14 +7,10 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  # def valid_user(user)
-  #  email = user["email"]
-  #  puts slack_member_emails
-  #  return slack_member_emails.include? email
-  # end
-
   def valid_user(user)
-    true
+    email = user["email"]
+    puts slack_member_emails
+    return slack_member_emails.include? email
   end
 
   def destroy

@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Oauth with Google
 gem 'omniauth-google-oauth2'
-
+# Slack API
+gem 'slack-ruby-client'
 gem 'csv'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
