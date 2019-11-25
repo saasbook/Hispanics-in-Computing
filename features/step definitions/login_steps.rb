@@ -12,7 +12,7 @@ end
 Given /I have (never )?logged in before/ do |never|
   unless never
     @first_name = "bar"
-    User.create!(:first_name => @first_name)
+    User.create!(:first_name => @first_name, :email => OmniAuth.config.mock_auth[:google][:info][:email])
   end
 end
 
