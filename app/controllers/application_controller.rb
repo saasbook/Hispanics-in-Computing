@@ -10,8 +10,13 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_user
 
+  protected
   def current_user
-    @current_user ||= User.find(session[:id]) if session[:id]
-	end
+    @current_user ||= User.find_by(:id => session[:id])
+  end
+
+  def check_current_user
+    redirect_to members_path and return unless current_user
+  end
 	
 end
