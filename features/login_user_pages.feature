@@ -15,4 +15,9 @@ Scenario: I am not a member of the slack group and attempt to login but cannot a
   Given I am not a member of the slack group
   And I login
   Then I should not see "Add Information" within navbar-wrapper
+
+@clear-user-db
+Scenario: Deny access to add_info page if not logged in
+  Given I go to the add information page
+  Then I should be on the members page
   

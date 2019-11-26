@@ -8,7 +8,7 @@ end
 
 Given /I login/ do
   steps %Q{
-    Given I am on /members
+    Given I am on the members page
     Then I press "Connect to Google"
     }
 end
