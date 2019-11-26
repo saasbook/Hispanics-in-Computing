@@ -7,17 +7,18 @@ Feature: Only when a user is logged in should they see certain tabs
 @omniauth-test @clear-user-db
 Scenario: I am a member of the slack group and login to add my information
   Given I am a member of the slack group
-  And I login
+  When I login
   Then I should see "Add Information" within navbar-wrapper
 
 @omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
   Given I am not a member of the slack group
-  And I login
+  When I login
   Then I should not see "Add Information" within navbar-wrapper
 
 @clear-user-db
 Scenario: Deny access to add_info page if not logged in
-  Given I go to the add information page
+  When I go to the add information page
   Then I should be on the members page
+
   
