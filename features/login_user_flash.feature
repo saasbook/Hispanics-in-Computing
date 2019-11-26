@@ -16,4 +16,4 @@ Scenario: Show the success message if a slack group member logs in
   Given I am a member of the slack group
   When I login
   Then I should be on the home page
-  And I should see "Login successful"
+  And I should see "Login successful" within alert
