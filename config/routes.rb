@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   get  'tapia2016'   => 'hispanicsincomputing#tapia_2016',  :as => 'conference_2016'
   get  'tapia2013'   => 'hispanicsincomputing#tapia_2013',  :as => 'conference_2013'
 
-
-  get  'add_info'   => 'posts#new'
-  post  'new_info'  => 'posts#save'
+  get  'profile/edit'  => 'posts#new', :as => "add_info"
+  get  'profile'  => 'posts#show', :as => "get_info"
+  post 'new_info'  => 'posts#save'
 
   get 'auth/google/callback' => 'sessions#create'
   # Example of named route that can be invoked with purchase_url(id: product.id)

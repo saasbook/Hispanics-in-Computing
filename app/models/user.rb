@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   end
 
   def self.valid_user(email)
-    return slack_member_emails.include? email
+    return (not email.nil?) && slack_member_emails.include?(email)
   end
 
   def self.slack_member_emails

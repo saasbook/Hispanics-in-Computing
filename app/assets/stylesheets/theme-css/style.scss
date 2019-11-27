@@ -79,6 +79,11 @@ body.tapia {
 	padding-top: 100px;
 }
 
+/* Padding for body elements on Profile page */
+body.profile {
+	padding-top: 100px;
+}
+
 /* Options for flash element on page */
 .flash-notice {
 	margin-top: 20px;
@@ -346,24 +351,24 @@ ul#menu-main > li > a:focus {
 	outline:0;
 }
 
-.nav-outer-tapia {
+.nav-outer-menu {
 	padding: 9px 15px 10px;
 }
 
-.nav-tapia {
+.nav-menu {
 	color: white;
 	font-weight: 600;
 	font-size:14px;
 	text-transform:uppercase;
 	text-decoration: none;
 }
-.nav-tapia:hover {
+.nav-menu:hover {
 	text-decoration: none;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 }
-.nav-tapia a:visited, a:active, a:focus {
+.nav-menu a:visited, a:active, a:focus {
 	text-decoration: none;
 	color: white;
 }
@@ -372,16 +377,27 @@ ul#menu-main > li > a:focus {
 	text-shadow: none;
 }
 
-ul#tapia-menu > li > a {
+ul.navbar-menu > li > a {
 	color: white;
 	font-weight: 600;
 	font-size:14px;
 	background-color: black;
 }
 
-ul#tapia-menu > li > a:hover {
+ul.navbar-menu > li > a:hover {
 	background-color: #ffff00;
 	color: black;
+}
+
+.navbar-header {
+	position: absolute;
+}
+
+h1.navbar-title {
+	margin-bottom: 0px;
+}
+.navbar-name {
+	color: #8a8a8a;
 }
 
 
@@ -518,11 +534,18 @@ section.section h1 {
 	font-family: 'Open Sans', sans serif;
 	text-align: center;
 }
-section.section p {
+section.section p{
 	font-size: 18px;
 	font-family: 'Open Sans', sans serif;
 	text-align: center;
 }
+
+section.section div.center-div{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 section.inner {
 	padding: 50px;
 }
