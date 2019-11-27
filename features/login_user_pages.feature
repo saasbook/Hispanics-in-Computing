@@ -14,7 +14,7 @@ Scenario: I am a member of the slack group and login to add my information
 Scenario: I am a member of the slack group and want to log out
   Given I am a member of the slack group
   When I login
-  Then I should see "Log out" within navbar-wrapper
+  Then I should see the log out button
 
 @omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
@@ -26,13 +26,12 @@ Scenario: I am not a member of the slack group and attempt to login but cannot a
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
   Given I am not a member of the slack group
   When I login
-  Then I should not see "Log out" within navbar-wrapper
-
+  Then I should not see the log out button
 @omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot
   Given I am not a member of the slack group
   When I login
-  Then I should not see "Log out" within navbar-wrapper
+  Then I should not see the log out button
 
 @omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot so the menu should not change

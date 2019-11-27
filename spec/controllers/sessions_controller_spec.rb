@@ -28,4 +28,27 @@ describe SessionsController do
       end
     end
   end
-end
+
+  describe ".destory" do
+    context "a user was logged in" do
+      before(:each) do
+        session[:id] = 1
+        post :destroy
+      end
+      it "sets the session[:id] to nil and redirects to the members page" do
+        expect(session[:id]).to eq(nil)
+        expect(response).to redirect_to(members_path)
+      end
+    end
+    context "a user was not logged in" do
+      before(:each) do
+        session[:id] = nil
+        post :destroy
+      end
+      it "redirects to the members page" do
+        expect(session[:id]).to eq(nil)
+        expect(response).to redirect_to(members_path)
+      end
+    end
+  end
+end 

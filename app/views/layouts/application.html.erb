@@ -56,7 +56,7 @@
                       <% if current_user %>
                         <li><%= link_to "Add Information", add_info_path %></li>
                         <li><%= link_to "View Profile", get_info_path %></li>
-                        <li><%= link_to "Log out", members_path %></li>
+                        <li><%= button_to "Log out", logout_path , :id => "logout-button" %></li>
                     <% else %>
                       <li><%= link_to "Log in", members_path %></li>
                     <% end %>

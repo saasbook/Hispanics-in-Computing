@@ -6,11 +6,19 @@ Given /I am (not )?a member of the slack group/ do |not_member|
   end
 end
 
-Given /I login/ do
+When /I login/ do
   steps %Q{
-    Given I am on the members page
+    Given I am on the home page
+    Then I press "Log in"
     Then I press "Connect to Google"
     }
+end
+
+When /I logout/ do
+  steps %Q{
+    Given I am on the home page
+    Then I press "Log out"
+  }
 end
 
 Given /I have (never )?logged in before/ do |never|
@@ -32,4 +40,12 @@ Then /my information should not change/ do
   auth_hash = OmniAuth.config.mock_auth[:google][:info]
   user = User.find_by(email: auth_hash[:email])
   expect(user.first_name).to eq(@first_name)
+end
+
+Then /I should (not )?see the log out button/ do |no_btn|
+  if no_btn
+    expect(page.has_button?("logout-button")).to be(false)
+  else
+    expect(page.has_button?("logout-button")).to be(true)
+  end
 end
