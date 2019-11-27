@@ -20,7 +20,12 @@
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
         </a>
-          <h1 class="brand"><a href="/">Hispanics in Computing</a></h1>
+          <div class="navbar-header">
+            <h1 class="brand navbar-title "><a href="/">Hispanics in Computing</a></h1>
+            <% if current_user %>
+              <h6 class="navbar-name"> <%= "Hello #{current_user.first_name}!" %></h6>
+            <% end %>
+          </div>
           <!-- navigation -->
           <nav class="pull-right nav-collapse">
             <ul id="menu-main" class="nav">
@@ -28,12 +33,12 @@
               <li><a href="/#events">Events</a></li>
               <li><a href="/#connect">Connect</a></li>
               <li>
-                <div class="nav-item dropdown nav-outer-tapia">
-                  <a class="nav-link nav-tapia dropdown-toggle" href="#" id="navbarDropdown"
+                <div class="nav-item dropdown nav-outer-menu">
+                  <a class="nav-link nav-menu dropdown-toggle" href="#" id="navbarDropdown"
                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tapia<span class="caret"></span>
                   </a>
-                  <ul id="tapia-menu" class="dropdown-menu" >
+                  <ul class="dropdown-menu navbar-menu" >
                     <li><%= link_to "TAPIA 2018", conference_2018_path %></li>
                     <li><%= link_to "TAPIA 2017", conference_2017_path %></li>
                     <li><%= link_to "TAPIA 2016", conference_2016_path %></li>
@@ -41,13 +46,22 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-item">
-                <a id= "members-link" class="nav-link" href="<%= members_path %>">Members</a>
-              </li>
-              <li >
-                <% if current_user %>
-                  <a class="nav-link" href="<%= add_info_path %>">Add Information</a>
-                <% end %>
+              <li>
+                <div class="nav-item dropdown nav-outer-menu">
+                  <a class="nav-link nav-menu dropdown-toggle" href="#" id="navbarDropdown"
+                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Members<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu navbar-menu" >
+                      <% if current_user %>
+                        <li><%= link_to "Add Information", add_info_path %></li>
+                        <li><%= link_to "View Profile", get_info_path %></li>
+                        <li><%= link_to "Log out", members_path %></li>
+                    <% else %>
+                      <li><%= link_to "Log in", members_path %></li>
+                    <% end %>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>

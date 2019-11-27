@@ -11,10 +11,34 @@ Scenario: I am a member of the slack group and login to add my information
   Then I should see "Add Information" within navbar-wrapper
 
 @omniauth-test @clear-user-db
+Scenario: I am a member of the slack group and want to log out
+  Given I am a member of the slack group
+  When I login
+  Then I should see "Log out" within navbar-wrapper
+
+@omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
   Given I am not a member of the slack group
   When I login
   Then I should not see "Add Information" within navbar-wrapper
+
+@omniauth-test @clear-user-db
+Scenario: I am not a member of the slack group and attempt to login but cannot add information
+  Given I am not a member of the slack group
+  When I login
+  Then I should not see "Log out" within navbar-wrapper
+
+@omniauth-test @clear-user-db
+Scenario: I am not a member of the slack group and attempt to login but cannot
+  Given I am not a member of the slack group
+  When I login
+  Then I should not see "Log out" within navbar-wrapper
+
+@omniauth-test @clear-user-db
+Scenario: I am not a member of the slack group and attempt to login but cannot so the menu should not change
+  Given I am not a member of the slack group
+  When I login
+  Then I should see "Log in" within navbar-wrapper
 
 @clear-user-db
 Scenario: Deny access to add_info page if not logged in

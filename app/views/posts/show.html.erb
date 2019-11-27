@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Profile</title>
+  </head>
+  <body class="profile">
+    <section class="section">
+      <div class="container">
+        <h4>My profile</h4>
+        <h1><%= @current_user.first_name + " " + @current_user.last_name %></h1>
+        <p><strong>Email: </strong> <%= @current_user.email %> </p>
+        <p><strong>Location: </strong> <%= @current_user.location %> </p>
+        <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
+        <div class="center-div">
+          <a href=<%= add_info_path %> class="btn btn-primary center">Edit Profile</a>
+        </div>
+      </div>
+    </section>
+    </body>
+</html>
