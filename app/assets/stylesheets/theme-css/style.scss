@@ -86,8 +86,9 @@ body.profile {
 
 /* Options for flash element on page */
 .flash-notice {
-	margin-top: 20px;
+	padding-top: 1.5em;
 	position: relative;
+	margin-bottom: -1em;
 }
 ::-moz-selection {
 	color:#333;
@@ -400,6 +401,24 @@ h1.navbar-title {
 	color: #8a8a8a;
 }
 
+/* similar link styling for logout button */
+#logout-button {
+	font-family: 'Source Code Pro', monospace;
+	color: white;
+	font-weight: 600;
+	font-size:14px;
+	background-color: black;
+	border: none;
+	text-align:left;
+	padding: 9px 15px 10px;
+	margin-bottom: -1.2em;
+}
+
+#logout-button:hover {
+	text-decoration: none;
+	background-color: #ffff00;
+	color: black;
+}
 
 /* =========================================================
 05. Page sections
