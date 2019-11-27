@@ -79,10 +79,28 @@ body.tapia {
 	padding-top: 100px;
 }
 
-/* Padding for body elements on Profile page */
-body.profile {
-	padding-top: 100px;
+section#profile {
+	padding: 5em 0 3em;
 }
+
+.profile-header {
+	text-align: center;
+}
+
+.profile-header h4 {
+	display: inline-block;
+}
+
+.edit-profile {
+	display: inline-block;
+	margin-left: 0.3em;
+}
+
+.profile-header a i.icon-pencil:hover {
+	color: #545454;
+	text-decoration: none;
+}
+
 
 /* Options for flash element on page */
 .flash-notice {
@@ -585,13 +603,13 @@ section#about {
 }
 
 
-/* === section about === */
+/* === section members === */
 
 section#members {
   text-align: center;
 }
 
-section#members > .login-wrapper {
+.login-wrapper {
 	-webkit-border-radius: 10px 10px 10px 10px;
 	border-radius: 10px 10px 10px 10px;
 	padding: 50px 30px;
@@ -605,6 +623,7 @@ section#members > .login-wrapper {
 section#posts {
   text-align: center;
 }
+
 /* =========================================================
 06. Footer
 ============================================================ */
@@ -699,6 +718,11 @@ i.icon-bglight.active {
 i.icon-bglight.active:hover{
 	color: #444;
 	background: #f7f7f7;
+}
+
+i.icon-bgwhite {
+	color: black;
+	background: white;
 }
 
 i.icon-bgdark {
@@ -1161,6 +1185,14 @@ i.icon-white {
 	height: auto;
 }
 
+/*------------- Profile Picture styling ----------- */
+.img-pfp {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 4em;
+	margin-top: -1em;
+}
 
 /* =========================================================
 09. Media queries
@@ -1230,6 +1262,11 @@ i.icon-white {
 	}
 
 	.nav-collapse {
+		text-align:center;
+		width:100%;
+	}
+
+	#logout-button {
 		text-align:center;
 		width:100%;
 	}

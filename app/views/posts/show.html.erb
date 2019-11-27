@@ -4,16 +4,19 @@
     <title>Profile</title>
   </head>
   <body class="profile">
-    <section class="section">
-      <div class="container">
-        <h4>My profile</h4>
+    <section class="section" id="profile">
+      <div class="container login-wrapper">
+        <div class="profile-header">
+          <h4>My Profile</h4>
+          <a href=<%= add_info_path %> class="edit-profile">
+            <i class="icon-square icon-bgwhite icon-pencil icon-2x"></i>
+          </a>
+        </div>
+        <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
         <h1><%= @current_user.first_name + " " + @current_user.last_name %></h1>
         <p><strong>Email: </strong> <%= @current_user.email %> </p>
         <p><strong>Location: </strong> <%= @current_user.location %> </p>
         <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
-        <div class="center-div">
-          <a href=<%= add_info_path %> class="btn btn-primary center">Edit Profile</a>
-        </div>
       </div>
     </section>
     </body>
