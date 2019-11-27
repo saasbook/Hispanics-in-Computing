@@ -16,7 +16,10 @@ class ApplicationController < ActionController::Base
   end
 
   def check_current_user
-    redirect_to members_path and return unless current_user
+    unless current_user
+      flash[:danger] = "You must login to gain access to that page"
+      redirect_to members_path and return
+    end
   end
 	
 end

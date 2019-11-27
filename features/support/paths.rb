@@ -11,6 +11,7 @@ module NavigationHelpers
     when /^the home page$/ then root_path
     when /^the members page$/ then members_path
     when /^the add information page$/ then add_info_path
+    when /^the profile page$/ then get_info_path
 
     else
       begin
