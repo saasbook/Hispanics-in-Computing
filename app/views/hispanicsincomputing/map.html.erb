@@ -13,7 +13,7 @@
             #map {
               height: 80%;
               width: 94%;
-              margin: 50px;
+              margin: 0px;
             }
             /* Optional: Makes the sample page fill the window. */
             html, body {
@@ -28,7 +28,7 @@
    <div class="header">
       <h1 style="text-align:center">Interactive Members Map</h1>
    </div>
-   <h2 style="text-align:center">Google</h2>
+   <!-- <h2 style="text-align:center">Google</h2>
    <div id="map">
       <script>
         var map;
@@ -48,8 +48,9 @@
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjzhveAf1kUT9y-9pCEz9nneARu8sKQ6E&callback=initMap"
       async defer></script>
    </div>
+   -->
    <div id="map-container">
-     <h2 style="text-align:center">OSM/Leaflet</h2>
+     <!-- <h2 style="text-align:center">OSM/Leaflet</h2> -->
      <h3 style="text-align:center">Current number of members: <%= @user_num %></h3>
      <div id="leaflet-map"></div>
   </div>

@@ -13,6 +13,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
   for (var i = 0; i < gon.all_users.length; i++) {
     var marker = L.marker(gon.locations[i]).addTo(mymap);
     p = document.createElement("p");
-    p.innerHTML = gon.all_users[i].name;
+    p.innerHTML = '<p align="center"><img src="/assets/default-profile.jpg"/></p><h3 style="text-align:center">'+gon.all_users[i].name+'</h2>';
+    p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+gon.all_users[i].country_of_origin+'<br/></p>';
+    p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+gon.all_users[i].email+'">'+ gon.all_users[i].email+'</a></p>';
     marker.bindPopup(p).openPopup();
   }
