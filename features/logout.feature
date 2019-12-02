@@ -10,10 +10,10 @@ Background: User logs in, then logs out
   Then I logout
 
 @omniauth-test @clear-user-db
-Scenario: Cannot access the "Add Information", "View Profile", and "Log out" links
+Scenario: Cannot access the "Edit Profile", "View Profile", and "Log out" links
   Then I should be on the members page
   And I should see "Logout successful" within alert
-  Then I should not see "Add Information" within navbar-wrapper
+  Then I should not see "Edit Profile" within navbar-wrapper
   And I should not see "View Profile" within navbar-wrapper
   And I should not see the log out button
   And I should see "Members Login" within navbar-wrapper

@@ -21,7 +21,7 @@ Scenario: Modify information and press save changes
 
 @omniauth-test @clear-user-db
 Scenario: Add information to map
-  Given I check "current_user[:map_visibility]"
+  Given I check "current_user[map_visibility]"
   Then I press "Save Changes"
   Then I should be on the profile page
   And I should see "Visible on Map"

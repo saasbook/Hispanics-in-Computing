@@ -8,7 +8,7 @@ Feature: Only when a user is logged in should they see certain tabs
 Scenario: I am a member of the slack group and login to add my information
   Given I am a member of the slack group
   When I login
-  Then I should see "Add Information" within navbar-wrapper
+  Then I should see "Edit Profile" within navbar-wrapper
 
 @omniauth-test @clear-user-db
 Scenario: I am a member of the slack group and want to log out
@@ -20,7 +20,7 @@ Scenario: I am a member of the slack group and want to log out
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
   Given I am not a member of the slack group
   When I login
-  Then I should not see "Add Information" within navbar-wrapper
+  Then I should not see "Edit Profile" within navbar-wrapper
 
 @omniauth-test @clear-user-db
 Scenario: I am not a member of the slack group and attempt to login but cannot add information
