@@ -16,7 +16,7 @@ Scenario: Cannot access the "Add Information", "View Profile", and "Log out" lin
   Then I should not see "Add Information" within navbar-wrapper
   And I should not see "View Profile" within navbar-wrapper
   And I should not see the log out button
-  And I should see "Log in" within navbar-wrapper
+  And I should see "Members Login" within navbar-wrapper
 
 @omniauth-test @clear-user-db
 Scenario: Cannot access the "add_info" page

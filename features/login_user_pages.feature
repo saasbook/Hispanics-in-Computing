@@ -37,7 +37,7 @@ Scenario: I am not a member of the slack group and attempt to login but cannot
 Scenario: I am not a member of the slack group and attempt to login but cannot so the menu should not change
   Given I am not a member of the slack group
   When I login
-  Then I should see "Log in" within navbar-wrapper
+  Then I should see "Members Login" within navbar-wrapper
 
 @clear-user-db
 Scenario: Deny access to add_info page if not logged in
