@@ -9,7 +9,7 @@ end
 When /I login/ do
   steps %Q{
     Given I am on the home page
-    Then I press "Log in"
+    Then I press "Members Login"
     Then I press "Connect to Google"
     }
 end

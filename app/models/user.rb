@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates_uniqueness_of :email
+
   def self.validate_and_create(auth)
     email = auth[:info][:email]
     if User.valid_user(email)
