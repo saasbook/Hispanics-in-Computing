@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   before_filter :check_current_user
-  
   def new
   end
 
@@ -12,11 +11,11 @@ class PostsController < ApplicationController
     success = @current_user
               .update(params
                       .require(:current_user)
-                      .permit(:first_name, 
-                              :last_name, 
-                              :location, 
+                      .permit(:first_name,
+                              :last_name,
+                              :location,
                               :country_of_origin,
-                              :on_map))
+                              :map_visibility))
     if success
       flash[:success] = "Update successful"
     else

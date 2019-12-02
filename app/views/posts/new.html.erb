@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <%= form_tag update_info_path, :method => :post do %>
   <section id="posts" class="section">
-    <div class="container">
-      <h3>My Profile Information</h3>
-      <div class="row">
-        <div class="span2">
+    <div class="container login-wrapper">
+      <div class="profile-header">
+        <h3>Edit Profile</h3>
+      </div>
+      <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
+      <div class="row profile-form">
+        <div class="span">
           <%= label :current_user, :first_name, 'First Name' %>
         </div>
-        <div class="span4">
+        <div class="span3">
           <%= text_field :current_user, :first_name %>
         </div>
       </div>
-      <div class="row">
-        <div class="span2">
+      <div class="row profile-form">
+        <div class="span">
           <%= label :current_user, :last_name, 'Last Name' %>
         </div>
-        <div class="span4">
+        <div class="span3">
           <%= text_field :current_user, :last_name %>
         </div>
       </div>
-      <div class="row">
-        <div class="span2">
+      <div class="row profile-form">
+        <div class="span">
           <%= label :current_user, :location, 'Current City' %>
         </div>
-        <div class="span4">
+        <div class="span3">
           <%= text_field :current_user, :location %>
         </div>
       </div>
-      <div class="row">
-        <div class="span2">
+      <div class="row profile-form">
+        <div class="span">
           <%= label :current_user, :country_of_origin, 'Country of Origin' %>
         </div>
-        <div class="span2">
-          <%= country_select :current_user, 
-                             :country_of_origin, 
-                             :include_blank => true,
-                             :selected => "" %>
+        <div class="span3">
+          <%= country_select :current_user,
+                             :country_of_origin,
+                             :include_blank => 'Select Country',
+                             :selected => current_user.country_of_origin %>
         </div>
       </div>
-      <div class="row">
-        <div class="span2">
-          <%= label :current_user, :on_map, 'Show Information on Map' %>
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :map_visibility, 'Visible on Map' %>
         </div>
-        <div class="span2">
-          <%= check_box :current_user, :on_map %>
+        <div class="span3">
+          <%= check_box :current_user,
+                            :map_visibility,
+                            :value => 1,
+                            :checked => current_user.map_visibility %>
         </div>
       </div>
-      <%= submit_tag 'Save Changes', :class => "btn btn-primary" %>
+
+      <%= submit_tag 'Save Changes', :class => "btn btn-primary profile-save"%>
     </div>
   </section>
 <% end %>
-

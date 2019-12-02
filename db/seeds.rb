@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = [{:name => 'Alice', :email => 'alice@testmail.com', :location => 'San Francisco, California'},
-    	  {:name => 'Bob', :email => 'bob@testmail.com', :location => 'Fremont, California'},
-    	  {:name => 'Carrie',:email => 'carrie@testmail.com', :location => 'Los Angeles, California'},
-      	  {:name => 'Doug', :email => 'doug@testmail.com', :location => 'Fresno, California'},
-      	  {:name => 'Emily', :email => 'emily@testmail.com', :location => 'San Diego, California'},
+users = [{:first_name => 'Alice', :last_name => 'A.', :email => 'alice@testmail.com', :location => 'San Francisco, California'},
+    	  {:first_name => 'Bob', :last_name => 'A.', :email => 'bob@testmail.com', :location => 'Fremont, California'},
+    	  {:first_name => 'Carrie', :last_name => 'A.', :email => 'carrie@testmail.com', :location => 'Los Angeles, California'},
+      	  {:first_name => 'Doug', :last_name => 'A.', :email => 'doug@testmail.com', :location => 'Fresno, California'},
+      	  {:first_name => 'Emily', :last_name => 'A.', :email => 'emily@testmail.com', :location => 'San Diego, California'},
   	 ]
 
 users.each do |user|

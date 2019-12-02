@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div#map-container {
-  background:#f2f2f2;
-  padding: 2em 4em 4em 4em;
+  padding: 1em 4em 2em 4em;
 }
 
 
@@ -12,4 +11,9 @@ div#leaflet-map {
   height: 500px;
   background:#f2f2f2;
   padding-top: 2em;
+}
+
+.map-pfp {
+  text-align:center;
+  max-width: 7em;
 }

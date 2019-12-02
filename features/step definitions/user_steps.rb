@@ -10,6 +10,7 @@ Given /^I enter the following in the form:$/ do |form_table|
   end
 end
 
+<<<<<<< HEAD
 When /I press "([^"]*)"/ do |text|
   click_on(text)
 end
@@ -17,6 +18,11 @@ end
 When /^(?:|I )check "([^"]*)"$/ do |field|
   check(field)
 end
+=======
+Given /I press "([^"]*)"/ do |text|
+  click_on(text)
+end
+>>>>>>> 371bc19a83786d918b1ac659dc9047e7454cff15
   
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)

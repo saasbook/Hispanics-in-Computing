@@ -7,7 +7,7 @@
     <section class="section" id="profile">
       <div class="container login-wrapper">
         <div class="profile-header">
-          <h4>My Profile</h4>
+          <h3>My Profile</h3>
           <a href=<%= add_info_path %> class="edit-profile">
             <i class="icon-square icon-bgwhite icon-pencil icon-2x"></i>
           </a>
@@ -17,7 +17,7 @@
         <p><strong>Email: </strong> <%= @current_user.email %> </p>
         <p><strong>Location: </strong> <%= @current_user.location %> </p>
         <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
-        <p><strong>Information displayed on map? : </strong> <%= @current_user.on_map ? "Yes" : "No" %> </p>
+        <p><%= @current_user.map_visibility ? '' : 'Not' %> Visible on Map</p>
       </div>
     </section>
     </body>
