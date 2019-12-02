@@ -41,6 +41,18 @@
                              :selected => current_user.country_of_origin %>
         </div>
       </div>
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :map_visibility, 'Visible on Map' %>
+        </div>
+        <div class="span3">
+          <%= check_box :current_user,
+                            :map_visibility,
+                            :value => 1,
+                            :checked => current_user.map_visibility %>
+        </div>
+      </div>
+
       <%= submit_tag 'Save Changes', :class => "btn btn-primary profile-save"%>
     </div>
   </section>

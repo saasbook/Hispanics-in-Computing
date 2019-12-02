@@ -11,12 +11,15 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
 
 
   for (var i = 0; i < gon.all_users.length; i++) {
-    var marker = L.marker(gon.locations[i]).addTo(mymap);
-    p = document.createElement("p");
-    let thisUser = gon.all_users[i];
-    let name = thisUser.first_name+' '+thisUser.last_name;
-    p.innerHTML = '<p align="center"><img class="map-pfp" src="/assets/profile_default.jpg"/></p><h4 style="text-align:center">'+name+'</h4>';
-    p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+'<br/></p>';
-    p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+thisUser.email+'">'+ thisUser.email+'</a></p>';
-    marker.bindPopup(p).openPopup();
+    var thisUser = gon.all_users[i];
+    if (thisUser.map_visibility) {
+      var marker = L.marker(gon.locations[i]).addTo(mymap);
+      p = document.createElement("p");
+      let name = thisUser.first_name+' '+thisUser.last_name;
+      p.innerHTML = '<p align="center"><img class="map-pfp" src="/assets/profile_default.jpg"/></p><h4 style="text-align:center">'+name+'</h4>';
+      p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+'<br/></p>';
+      p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+thisUser.email+'">'+ thisUser.email+'</a></p>';
+      marker.bindPopup(p).openPopup();
+    }
+
   }

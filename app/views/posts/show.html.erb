@@ -17,6 +17,7 @@
         <p><strong>Email: </strong> <%= @current_user.email %> </p>
         <p><strong>Location: </strong> <%= @current_user.location %> </p>
         <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
+        <p><%= @current_user.map_visibility ? '' : 'Not' %> Visible on Map</p>
       </div>
     </section>
     </body>
