@@ -83,11 +83,17 @@ section#profile {
 	padding: 5em 0 3em;
 }
 
+section#posts label {
+	display: inline-block;
+	width: 7em;
+	text-align: right;
+}
+
 .profile-header {
 	text-align: center;
 }
 
-.profile-header h4 {
+.profile-header h3 {
 	display: inline-block;
 }
 
@@ -99,6 +105,17 @@ section#profile {
 .profile-header a i.icon-pencil:hover {
 	color: #545454;
 	text-decoration: none;
+}
+
+.profile-form {
+	text-align: left;
+	margin: auto;
+	margin-bottom: .5em !important;
+}
+
+.profile-save {
+	width: auto !important;
+	display: inline-block
 }
 
 
@@ -1192,6 +1209,7 @@ i.icon-white {
   margin-right: auto;
   max-width: 4em;
 	margin-top: -1em;
+	padding: 1em 0 1.5em;
 }
 
 /* =========================================================
@@ -1270,6 +1288,12 @@ i.icon-white {
 		text-align:center;
 		width:100%;
 	}
+
+	section#posts label {
+		display: inline-block;
+		text-align: right;
+	}
+
 }
 
     /* Smaller screens ----------- */
