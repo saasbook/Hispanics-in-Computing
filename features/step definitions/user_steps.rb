@@ -2,6 +2,22 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^I enter the following in the form:$/ do |form_table|
+  form_table.hashes.first.each do |form_input, form_value|
+    steps %Q{
+      When I fill in "#{form_input}" with "#{form_value}"
+    }
+  end
+end
+
+Given /I press "([^"]*)"/ do |text|
+  click_on(text)
+end
+  
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -15,8 +31,20 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   end
 end
 
-Given /I press "([^"]*)"/ do |text|
-  click_on(text)
+Then /^I should see the following: (.*)$/ do |text_vals|
+  text_vals.split(", ").each do |text|
+    steps %Q{
+      I should see "#{text}"
+    }
+  end
+end
+
+Then /^(?:|I )should see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
 end
 
 Then /I should see "([^"]*)" within (.*)/ do |text, selector|
