@@ -10,8 +10,12 @@ Given /^I enter the following in the form:$/ do |form_table|
   end
 end
 
-Given /I press "([^"]*)"/ do |text|
+When /I press "([^"]*)"/ do |text|
   click_on(text)
+end
+
+When /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
 end
   
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|

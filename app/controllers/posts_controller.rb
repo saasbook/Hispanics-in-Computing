@@ -15,7 +15,8 @@ class PostsController < ApplicationController
                       .permit(:first_name, 
                               :last_name, 
                               :location, 
-                              :country_of_origin))
+                              :country_of_origin,
+                              :on_map))
     if success
       flash[:success] = "Update successful"
     else

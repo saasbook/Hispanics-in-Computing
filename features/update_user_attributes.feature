@@ -19,3 +19,10 @@ Scenario: Modify information and press save changes
   Then I should be on the profile page
   And I should see the following: Newfirst, Newlast
 
+@omniauth-test @clear-user-db
+Scenario: Add information to map
+  Given I check "current_user[on_map]"
+  Then I press "Save Changes"
+  Then I should be on the profile page
+  And I should see "Information displayed on map? : Yes"
+

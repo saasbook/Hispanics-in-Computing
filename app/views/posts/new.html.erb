@@ -38,6 +38,14 @@
                              :selected => "" %>
         </div>
       </div>
+      <div class="row">
+        <div class="span2">
+          <%= label :current_user, :on_map, 'Show Information on Map' %>
+        </div>
+        <div class="span2">
+          <%= check_box :current_user, :on_map %>
+        </div>
+      </div>
       <%= submit_tag 'Save Changes', :class => "btn btn-primary" %>
     </div>
   </section>
