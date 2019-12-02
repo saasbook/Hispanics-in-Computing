@@ -34,7 +34,6 @@ describe User do
         allow(User).to receive(:slack_member_emails).and_return([@email])
       end
       it "creates a user object in the database" do
-        puts User.all
         expect{User.validate_and_create(@auth_hash)}.to change{User.count}.by(1)
       end
       it "returns a user object" do

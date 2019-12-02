@@ -25,6 +25,5 @@ class User < ActiveRecord::Base
 			all_members.concat(response.members.select { |member| !member["deleted"]})
     end
 		return all_members.map { |member| member["profile"]["email"]}
-	end
-
+  end
 end

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get  'profile/edit'  => 'posts#new', :as => "add_info"
   get  'profile'  => 'posts#show', :as => "get_info"
-  post 'new_info'  => 'posts#save'
+  post 'update_info'  => 'posts#update'
 
   get 'auth/google/callback' => 'sessions#create'
   post 'logout' => 'sessions#destroy'

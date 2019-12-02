@@ -8,8 +8,19 @@ class PostsController < ApplicationController
   def show
   end
 
-  def save
-    # add saving stuff here
+  def update
+    success = @current_user
+              .update(params
+                      .require(:current_user)
+                      .permit(:first_name, 
+                              :last_name, 
+                              :location, 
+                              :country_of_origin))
+    if success
+      flash[:success] = "Update successful"
+    else
+      flash[:error] = "Update unsuccessful"
+    end
     redirect_to get_info_path
   end
 
