@@ -17,7 +17,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
       p.innerHTML = '<p align="center"><img class="map-pfp" src="/assets/profile_default.jpg"/></p><h4 style="text-align:center">'+name+'</h4>';
-      p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+'<br/></p>';
+      if (thisUser.country_of_origin) {
+        p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+' '+'<span class=\"flag flag-'+String(thisUser.country_of_origin).toLowerCase()+'\"></span>'+'<br/></p>';
+      }
       p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+thisUser.email+'">'+ thisUser.email+'</a></p>';
       marker.bindPopup(p).openPopup();
     }
