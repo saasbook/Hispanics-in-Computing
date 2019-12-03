@@ -23,7 +23,7 @@ After forking the repo,
 
 === Adding a new Tapia Page
 
-* Inside of config/routes.rb add a route to the new Tapia Page.
+* Inside of config/routes.rb add a route to the new Tapia Page. This will add a new URL whose path is `/tapia<YEAR>`
    get  'tapia<YEAR>'   => 'hispanicsincomputing#tapia_<YEAR>',  :as => 'conference_<YEAR>'
 * Inside of app/views/layouts/application.html.erb add a link to a new Tapia Page under the Tapia dropdown
    <li><%= link_to "TAPIA <YEAR>", conference_<YEAR>_path %></li>
