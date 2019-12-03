@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   validates_uniqueness_of :email
+  before_save :validate_location_for_map
 
   def self.validate_and_create(auth)
     email = auth[:info][:email]
@@ -25,5 +26,16 @@ class User < ActiveRecord::Base
 			all_members.concat(response.members.select { |member| !member["deleted"]})
     end
 		return all_members.map { |member| member["profile"]["email"]}
+  end
+
+  def valid_map_user?
+    not Geocoder.search(self.location).empty?
+  end
+
+  def validate_location_for_map
+    if self.map_visibility && (not valid_map_user?)
+      self.map_visibility = false
+    end
+    return true
   end
 end

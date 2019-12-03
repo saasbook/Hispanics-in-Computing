@@ -5,10 +5,6 @@ class HispanicsincomputingController < ApplicationController
   def members
   end
 
-  def create
-    render text: request.env['omniauth.auth'].to_yaml
-  end
-
   def tapia_2018
   end
 
@@ -25,10 +21,11 @@ class HispanicsincomputingController < ApplicationController
   end
 
   def map
-    gon.all_users = User.all
+    all_map_users = User.where(map_visibility: true)
+    gon.all_users = all_map_users
 
     @locations = []
-    User.all.each do |user|
+    all_map_users.each do |user|
       @locations << Geocoder.search(user.location).first.coordinates
     end
     @user_num = @locations.length

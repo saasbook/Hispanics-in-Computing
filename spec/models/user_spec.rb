@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe User do
+  before(:each) do
+    # Global stub for Geocoder
+    allow(Geocoder).to receive(:search).and_return(["item"])
+  end
   describe ".valid_user" do
     before(:all) do
       @email = "bob@gmail.com"
@@ -54,6 +58,42 @@ describe User do
       it "returns nil" do
         expect(User.validate_and_create(@auth_hash)).to be_nil
       end
+    end
+  describe "#valid_map_user?"
+    it "returns True when geocoder can find the location" do
+      user = User.new(:email=>"bob@gmail.com", :location=>"SF")
+      expect(Geocoder).to receive(:search).with(user.location)
+                                          .and_return(["item"])
+      expect(user.valid_map_user?).to be true
+    end
+    it "returns False when geocoder cannot find the location" do
+      user = User.new(:email=>"bob@gmail.com", :location=>"")
+      expect(Geocoder).to receive(:search).with(user.location)
+                                          .and_return([])
+      expect(user.valid_map_user?).to be false
+    end
+  end
+  describe "#validate_location_for_map" do
+    before(:each) do
+      # clear the database before adding the user
+      User.delete_all
+      @user = User.create!(:email=>"bob@gmail.com",
+                           :map_visibility=>false)
+    end
+    it "sets map_visibility to False if the user does not have a valid location" do
+      expect(@user).to receive(:valid_map_user?).and_return(false)
+      @user.update_attributes(:location=>"",:map_visibility=>true)
+      expect(@user.map_visibility).to be false
+    end
+    it "sets map_visibility to True if the user does not have a valid location" do
+      expect(@user).to receive(:valid_map_user?).and_return(true)
+      @user.update_attributes(:location=>"sf",:map_visibility=>true)
+      expect(@user.map_visibility).to be true
+    end
+    it "does not change the map_visibility even if the location is valid" do
+      expect(@user).to_not receive(:valid_map_user?)
+      @user.update_attributes(:location=>"sf")
+      expect(@user.map_visibility).to be false
     end
   end
 end

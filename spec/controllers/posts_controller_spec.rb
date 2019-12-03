@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe PostsController do
+  before(:each) do
+    # Global stub for Geocoder
+    allow(Geocoder).to receive(:search).and_return(["item"])
+  end
   describe "#update" do
     before(:each) do
       User.delete_all
