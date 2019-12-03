@@ -12,7 +12,7 @@
             <i class="icon-square icon-bgwhite icon-pencil icon-2x"></i>
           </a>
         </div>
-        <% if not @current_user.photo_link.empty? %>
+        <% if @current_user.photo_link.empty? %>
           <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
         <% else %>
           <%= image_tag(@current_user.photo_link, :alt => "profile picture", :class => "img-responsive img-pfp") %>
