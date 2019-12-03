@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
       var marker = L.marker(gon.locations[i]).addTo(mymap);
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
-      let imgSrc = "/assets/profile_default.jpg";
+      let imgSrc = "/assets/images/profile_default.jpg";
       if (thisUser.photo_link){
         imgSrc = thisUser.photo_link
       }
