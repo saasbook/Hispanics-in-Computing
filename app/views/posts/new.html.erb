@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<%= form_tag update_info_path, :method => :post do %>
+<%= form_tag update_info_path, :method => :post do%>
   <section id="posts" class="section">
     <div class="container login-wrapper">
       <div class="profile-header">
         <h3>Edit Profile</h3>
       </div>
       <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
+
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :photo_link, 'Photo Link' %>
+        </div>
+        <div class="span3">
+          <%= text_field :current_user, :photo_link %>
+        </div>
+      </div>
       <div class="row profile-form">
         <div class="span">
           <%= label :current_user, :first_name, 'First Name' %>

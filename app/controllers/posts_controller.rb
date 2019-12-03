@@ -15,7 +15,9 @@ class PostsController < ApplicationController
                               :last_name,
                               :location,
                               :country_of_origin,
-                              :map_visibility))
+                              :map_visibility,
+                              :photo_link))
+
     if success
       flash[:success] = "Update successful"
     else

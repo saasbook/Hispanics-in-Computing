@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   validates_uniqueness_of :email
+  # has_one_attached :avatar
 
   def self.validate_and_create(auth)
     email = auth[:info][:email]
