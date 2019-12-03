@@ -30,3 +30,4 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
     }
 
   }
+;
