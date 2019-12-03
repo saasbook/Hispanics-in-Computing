@@ -15,15 +15,16 @@ class PostsController < ApplicationController
                     :last_name,
                     :location,
                     :country_of_origin,
-                    :map_visibility)
+                    :map_visibility,
+                    :photo_link)
     success = @current_user.update(filtered_params)
     puts visibility_modified?(success, filtered_params[:map_visibility])
     if visibility_modified?(success, filtered_params[:map_visibility])
       flash[:warning] = "Unable to add pin to map:" \
                         " Location must be the name" \
                         " of a city in order for a pin" \
-                        " to be visible on the map" 
-                        
+                        " to be visible on the map"
+
     elsif success
       flash[:success] = "Update successful"
     else
