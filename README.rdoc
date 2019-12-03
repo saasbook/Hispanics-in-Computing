@@ -20,3 +20,15 @@ After forking the repo,
 * run `bundle exec rake assets:precompile RAILS_ENV=production` to regenerate assets
 * run `rails s` at least once after all code changes
 * `heroku push origin master`
+
+=== Adding a new Tapia Page
+
+* Inside of config/routes.rb add a route to the new Tapia Page.
+   get  'tapia<YEAR>'   => 'hispanicsincomputing#tapia_<YEAR>',  :as => 'conference_<YEAR>'
+* Inside of app/views/layouts/application.html.erb add a link to a new Tapia Page under the Tapia dropdown
+   <li><%= link_to "TAPIA <YEAR>", conference_<YEAR>_path %></li>
+* Inside of app/controllers/hispanicsinengineering.rb add a new method: 
+   def tapia_<YEAR> 
+   end
+* Create a new html.erb file inside of app/views/hispanicsincomputing named `tapia_<YEAR>.html.erb` and add html for the page in this file.
+  
