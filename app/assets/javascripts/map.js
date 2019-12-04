@@ -25,6 +25,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
       if (thisUser.country_of_origin) {
         p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+' '+'<span class=\"flag flag-'+String(thisUser.country_of_origin).toLowerCase()+'\"></span>'+'<br/></p>';
       }
+      p.innerHTML+= '<p align="center" style="font-size:130%;">Profession: '+thisUser.profession+'</a></p>';
+      p.innerHTML+= '<p align="center" style="font-size:130%;">Organization: '+thisUser.organization+'</a></p>';
+      p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="'+thisUser.linkedin+'">LinkedIn</a></p>';
       p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+thisUser.email+'">'+ thisUser.email+'</a></p>';
       marker.bindPopup(p).openPopup();
     }
