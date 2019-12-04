@@ -1,0 +1,19 @@
+// Place all the styles related to the map controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#map-container {
+  padding: 1em 4em 2em 4em;
+}
+
+
+div#leaflet-map {
+  height: 500px;
+  background:#f2f2f2;
+  padding-top: 2em;
+}
+
+.map-pfp {
+  text-align:center;
+  max-width: 7em;
+}

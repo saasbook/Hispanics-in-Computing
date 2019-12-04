@@ -1,4 +1,12 @@
-require 'omniauth-linkedin-oauth2'
+require 'omniauth-google-oauth2'
 Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :linkedin, '86aha6g6j6zx7k', 'JmvGfOOzga8l2EDx'
+  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_SECRET"], {
+    skip_jwt: true,
+    :name => "google",
+    :scope => "email, profile", 
+    :prompt => "select_account",
+    :image_aspect_ratio => "square",
+    :image_size => 50,
+    :access_type => 'offline'
+  }
 end

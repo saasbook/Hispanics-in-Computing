@@ -69,11 +69,62 @@ body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 
-/* Padding for body elements on Tapia pages */
-body.tapia { 
+/* Padding for body elements on map */
+body.map {
 	padding-top: 100px;
 }
 
+/* Padding for body elements on Tapia pages */
+body.tapia {
+	padding-top: 100px;
+}
+
+section#profile {
+	padding: 5em 0 3em;
+}
+
+section#posts label {
+	display: inline-block;
+	width: 7em;
+	text-align: right;
+}
+
+.profile-header {
+	text-align: center;
+}
+
+.profile-header h3 {
+	display: inline-block;
+}
+
+.edit-profile {
+	display: inline-block;
+	margin-left: 0.3em;
+}
+
+.profile-header a i.icon-pencil:hover {
+	color: #545454;
+	text-decoration: none;
+}
+
+.profile-form {
+	text-align: left;
+	margin: auto;
+	margin-bottom: .5em !important;
+}
+
+.profile-save {
+	width: auto !important;
+	display: inline-block
+}
+
+
+/* Options for flash element on page */
+.flash-notice {
+	padding-top: 1.5em;
+	position: relative;
+	margin-bottom: -1em;
+}
 ::-moz-selection {
 	color:#333;
 }
@@ -336,24 +387,24 @@ ul#menu-main > li > a:focus {
 	outline:0;
 }
 
-.nav-outer-tapia {
+.nav-outer-menu {
 	padding: 9px 15px 10px;
 }
 
-.nav-tapia {
+.nav-menu {
 	color: white;
 	font-weight: 600;
 	font-size:14px;
 	text-transform:uppercase;
 	text-decoration: none;
 }
-.nav-tapia:hover {
+.nav-menu:hover {
 	text-decoration: none;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 }
-.nav-tapia a:visited, a:active, a:focus {
+.nav-menu a:visited, a:active, a:focus {
 	text-decoration: none;
 	color: white;
 }
@@ -362,18 +413,47 @@ ul#menu-main > li > a:focus {
 	text-shadow: none;
 }
 
-ul#tapia-menu > li > a {
+ul.navbar-menu > li > a {
 	color: white;
 	font-weight: 600;
 	font-size:14px;
 	background-color: black;
 }
 
-ul#tapia-menu > li > a:hover {
+ul.navbar-menu > li > a:hover {
 	background-color: #ffff00;
 	color: black;
 }
 
+.navbar-header {
+	position: absolute;
+}
+
+h1.navbar-title {
+	margin-bottom: 0px;
+}
+.navbar-name {
+	color: #8a8a8a;
+}
+
+/* similar link styling for logout button */
+#logout-button {
+	font-family: 'Source Code Pro', monospace;
+	color: white;
+	font-weight: 600;
+	font-size:14px;
+	background-color: black;
+	border: none;
+	text-align:left;
+	padding: 9px 15px 10px;
+	margin-bottom: -1.2em;
+}
+
+#logout-button:hover {
+	text-decoration: none;
+	background-color: #ffff00;
+	color: black;
+}
 
 /* =========================================================
 05. Page sections
@@ -508,11 +588,18 @@ section.section h1 {
 	font-family: 'Open Sans', sans serif;
 	text-align: center;
 }
-section.section p {
+section.section p{
 	font-size: 18px;
 	font-family: 'Open Sans', sans serif;
 	text-align: center;
 }
+
+section.section div.center-div{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
 section.inner {
 	padding: 50px;
 }
@@ -533,13 +620,13 @@ section#about {
 }
 
 
-/* === section about === */
+/* === section members === */
 
 section#members {
   text-align: center;
 }
 
-section#members > .login-wrapper {
+.login-wrapper {
 	-webkit-border-radius: 10px 10px 10px 10px;
 	border-radius: 10px 10px 10px 10px;
 	padding: 50px 30px;
@@ -548,6 +635,10 @@ section#members > .login-wrapper {
 	position: relative;
 	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+section#posts {
+  text-align: center;
 }
 
 /* =========================================================
@@ -644,6 +735,11 @@ i.icon-bglight.active {
 i.icon-bglight.active:hover{
 	color: #444;
 	background: #f7f7f7;
+}
+
+i.icon-bgwhite {
+	color: black;
+	background: white;
 }
 
 i.icon-bgdark {
@@ -1106,6 +1202,15 @@ i.icon-white {
 	height: auto;
 }
 
+/*------------- Profile Picture styling ----------- */
+.img-pfp {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 4em;
+	margin-top: -1em;
+	padding: 1em 0 1.5em;
+}
 
 /* =========================================================
 09. Media queries
@@ -1178,6 +1283,17 @@ i.icon-white {
 		text-align:center;
 		width:100%;
 	}
+
+	#logout-button {
+		text-align:center;
+		width:100%;
+	}
+
+	section#posts label {
+		display: inline-block;
+		text-align: right;
+	}
+
 }
 
     /* Smaller screens ----------- */
