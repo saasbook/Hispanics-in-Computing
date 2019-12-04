@@ -1,5 +1,8 @@
 require 'cucumber/rspec/doubles'
 require 'cucumber/rails'
+require 'simplecov'
+
+SimpleCov.start 'rails'
 
 Before('@omniauth-test') do
   OmniAuth.config.test_mode = true
