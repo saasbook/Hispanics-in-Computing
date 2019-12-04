@@ -19,6 +19,9 @@
         <% end %>
         <h1><%= @current_user.first_name + " " + @current_user.last_name %></h1>
         <p><strong>Email: </strong> <%= @current_user.email %> </p>
+        <p><strong>Profession: </strong> <%= @current_user.profession %> </p>
+        <p><strong>LinkedIn: </strong> <%= @current_user.linkedin %> </p>
+        <p><strong>Organization: </strong> <%= @current_user.organization %> </p>
         <p><strong>Location: </strong> <%= @current_user.location %> </p>
         <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
         <p><%= @current_user.map_visibility ? '' : 'Not' %> Visible on Map</p>
