@@ -17,16 +17,23 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/ck24z3cvl3w731cnxddhxret7/til
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
       let imgSrc = "/assets/images/profile_default.jpg";
-      if (thisUser.photo_link){
+      if (thisUser.photo_link) {
         imgSrc = thisUser.photo_link
       }
       // p.innerHTML = '<p align="center"><img class="map-pfp" src="/assets/profile_default.jpg"/></p><h4 style="text-align:center">'+name+'</h4>';
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc + '/></p><h4 style="text-align:center">'+name+'</h4>';
-      if (thisUser.country_of_origin) {
-        p.innerHTML+= '<p align="center" style="font-size:130%;">Country: '+thisUser.country_of_origin+' '+'<span class=\"flag flag-'+String(thisUser.country_of_origin).toLowerCase()+'\"></span>'+'<br/></p>';
-      }
+      p.innerHTML+= createMapHTML(thisUser.country_of_origin.split(" "));
       p.innerHTML+= '<p align="center" style="font-size:130%;"><a href="mailto:'+thisUser.email+'">'+ thisUser.email+'</a></p>';
       marker.bindPopup(p).openPopup();
     }
 
   }
+
+  function createMapHTML(countries) {
+    var mapHTML = '<p align="center" style="font-size:130%;">Country: '
+    for (var j = 1; j < countries.length; j++) {
+      var country_name = countries[j];
+      mapHTML+= country_name+' '+'<span class=\"flag flag-'+country_name.toLowerCase()+'" style="margin-right: 10px;"></span>';
+    }
+    return mapHTML + '<br/></p>'
+  } 

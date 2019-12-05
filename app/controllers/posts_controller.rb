@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  before_filter :check_current_user, :except => [:visibility_modified?]
+  before_filter :check_current_user, :except => [:filter_and_modify_params, :visibility_modified?]
 
   def new
   end
