@@ -96,4 +96,14 @@ describe User do
       expect(@user.map_visibility).to be false
     end
   end
+  describe "#country_of_origin_to_array" do
+    it "splits up the country text to an array" do
+      user = User.new(:email => "bob@gmail.com", :country_of_origin => "CA US")
+      expect(user.country_of_origin_to_array).to eq(["CA", "US"])
+    end
+    it "returns an empty array when country of origin is the empty string" do
+      user = User.new(:email => "bob@gmail.com", :country_of_origin => "")
+      expect(user.country_of_origin_to_array).to eq([])
+    end
+  end
 end

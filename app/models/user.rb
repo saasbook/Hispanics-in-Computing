@@ -38,4 +38,8 @@ class User < ActiveRecord::Base
     end
     return true
   end
+
+  def country_of_origin_to_array
+    self.country_of_origin.split(" ")
+  end
 end
