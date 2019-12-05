@@ -54,6 +54,7 @@ var otherIcon = L.icon({
       }
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc
       + '/></p><h4 style="text-align:center">'+name+'</h4>';
+      p.innerHTML+= createMapHTML(thisUser.country_of_origin.split(" "));
       p.innerHTML+= '<p align="center" style="font-size:130%;">'+thisUser.profession+' @'+thisUser.organization+'</a></p>';
       p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
       +'<a target="blank" href=mailto:'+thisUser.email+' class="edit-profile"><i class="icon-square icon-envelope icon-2x"></i></a></div>';
@@ -63,6 +64,11 @@ var otherIcon = L.icon({
   }
 
   function createMapHTML(countries) {
+    // If the countries array only contains the empty string 
+    // then add nothing to the html
+    if (countries.length <= 1 || countries[1].length == 0) {
+      return "";
+    }
     var mapHTML = '<p align="center" style="font-size:130%;">Country: '
     for (var j = 1; j < countries.length; j++) {
       var country_name = countries[j];
