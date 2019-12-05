@@ -20,9 +20,19 @@ Scenario: Modify information and press save changes
   And I should see the following: Newfirst, Newlast
 
 @omniauth-test @clear-user-db
-Scenario: Add information to map
+Scenario: Add information to map without adding a location
+  Given I enter the following in the form:
+  | current_user[location] |
+  | Berkeley               |
+  And I check "current_user[map_visibility]"
+  Then I press "Save Changes"
+  Then I should be on the profile page
+  And I should not see "Not Visible on Map"
+
+@omniauth-test @clear-user-db
+Scenario: Add information to map without adding a location
   Given I check "current_user[map_visibility]"
   Then I press "Save Changes"
   Then I should be on the profile page
-  And I should see "Visible on Map"
-
+  And I should see "Not Visible on Map"
+  And I should see "Unable to add pin to map"
