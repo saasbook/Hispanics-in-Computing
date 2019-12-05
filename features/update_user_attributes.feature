@@ -36,3 +36,17 @@ Scenario: Add information to map without adding a location
   Then I should be on the profile page
   And I should see "Not Visible on Map"
   And I should see "Unable to add pin to map"
+
+@omniauth-test @clear-user-db
+Scenario: Choose one country
+  Given I select "Canada" within #current_user_country_of_origin
+  Then I press "Save Changes"
+  Then I should be on the profile page
+  Then I should see "Country of origin : CA"
+
+@omniauth-test @clear-user-db
+Scenario: Choose multiple countries
+  Given I select the following within #current_user_country_of_origin: Canada, Australia, United States
+  Then I press "Save Changes"
+  Then I should be on the profile page
+  Then I should see "Country of origin : AU CA US"

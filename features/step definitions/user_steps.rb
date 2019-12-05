@@ -26,6 +26,19 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+When /^I select the following within (.*): (.*)$/ do |select_name, values|
+  values.split(", ").each do |value|
+    steps %Q{
+      When I select "#{value}" within #{select_name}
+    }
+  end
+end
+
+When /^I select "([^"]*)" within (.*)$/ do |value, select_name|
+  select_box = page.find(select_name)
+  select_box.select(value)
+end
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
