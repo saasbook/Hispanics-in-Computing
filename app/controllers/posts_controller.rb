@@ -16,7 +16,10 @@ class PostsController < ApplicationController
                     :location,
                     :country_of_origin,
                     :map_visibility,
-                    :photo_link)
+                    :photo_link,
+                    :profession,
+                    :linkedin,
+                    :organization)
     success = @current_user.update(filtered_params)
     puts visibility_modified?(success, filtered_params[:map_visibility])
     if visibility_modified?(success, filtered_params[:map_visibility])

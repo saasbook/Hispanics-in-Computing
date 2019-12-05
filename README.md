@@ -4,7 +4,7 @@
 
 <p align="center"><i>CS 169 Group 9 Fall 2019</i></p>
 <p align="center">
-  <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/79140623_743663496131268_6202584433631952896_n.png?_nc_cat=101&_nc_ohc=E6qR74qITKAAQndskkjBAxDanZHPvdRPIym44IWve_dFJwUvL_RhqSTfA&_nc_ht=scontent-lax3-1.xx&oh=2653660f1fcb80cc606169c2f8fda6ad&oe=5E858A5C"  height="300">
+  <img src="/app/assets/image/readme/home.png"  height="300">
 </p>
 <p align="center">Special Thanks to Professor Nery Chapeton Lamas</p>
 
@@ -51,7 +51,7 @@ View of a side-by-side comparison of the old home page content and new home page
 
 Before | After
 --- | ---
-![](https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/78600498_2563566337063726_1739049949120692224_n.png?_nc_cat=110&_nc_ohc=7f6W157RI0oAQnTuDT9waS-9rvFe20C-FDFKSb75U9SPpFNJa4D2vUiHw&_nc_ht=scontent-lax3-1.xx&oh=e291a7ec79ac491da6a1ba1592333e43&oe=5E40EAF9) | ![](https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/78817505_470680540478784_3547178442833264640_n.png?_nc_cat=110&_nc_ohc=vEeHZj8ffD4AQkJapJxyqdPOFolz4jKRWGHQ12Uem-gRw21NvIH-brnvA&_nc_ht=scontent-lax3-1.xx&oh=86916e525c2048abe8d4943f20fad7a6&oe=5E8C4DA7)
+![]("/app/assets/image/readme/full-old.png") | ![]("/app/assets/image/readme/full-new.png")
 
 ### Portal
 
@@ -59,7 +59,7 @@ Use of OmniAuth for Google login and flash messages to show login status.
 
 On login | On logout
 --- | ---
-![](https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/78101851_688629901661407_7859575068307750912_n.png?_nc_cat=108&_nc_ohc=SrbdM45wT7YAQmSLFKwNSQHehgKbYehHbyVS7jFVLqMTpsbVGSv6j-JMw&_nc_ht=scontent-lax3-1.xx&oh=9489475c4daddca7b523bd30828c67fb&oe=5E86EA40) | ![](https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/78657876_928906124169263_8975898765743357952_n.png?_nc_cat=109&_nc_ohc=Sw1XNOTVCj8AQnDeeT-8D9eRAq5mj_YrEMIhxEeSXoP09gOcbYbIpatQg&_nc_ht=scontent-lax3-1.xx&oh=8c7129ebc1ac4749dc80e5d20f245171&oe=5E7D7014)
+![]("/app/assets/image/readme/on-login.png") | ![]("/app/assets/image/readme/on-logout.png")
 
 ## Demos
 
