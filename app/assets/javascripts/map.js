@@ -48,16 +48,12 @@ var otherIcon = L.icon({
       var marker = L.marker(gon.locations[i], {icon: myIcon}).addTo(mymap);
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
-      let imgSrc = "/assets/profile_default.jpg";
+      let imgSrc = "/assets/images/profile_default.jpg";
       if (thisUser.photo_link != null && thisUser.photo_link.length > 5) {
         imgSrc = thisUser.photo_link
       }
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc
       + '/></p><h4 style="text-align:center">'+name+'</h4>';
-      if (thisUser.country_of_origin) {
-        p.innerHTML+= '<p align="center" style="font-size:130%;">'+thisUser.country_of_origin+' '
-          +'<span class=\"flag flag-'+String(thisUser.country_of_origin).toLowerCase()+'\"></span>'+'<br/></p>';
-      }
       p.innerHTML+= '<p align="center" style="font-size:130%;">'+thisUser.profession+' @'+thisUser.organization+'</a></p>';
       p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
       +'<a target="blank" href=mailto:'+thisUser.email+' class="edit-profile"><i class="icon-square icon-envelope icon-2x"></i></a></div>';
@@ -65,3 +61,12 @@ var otherIcon = L.icon({
     }
 
   }
+
+  function createMapHTML(countries) {
+    var mapHTML = '<p align="center" style="font-size:130%;">Country: '
+    for (var j = 1; j < countries.length; j++) {
+      var country_name = countries[j];
+      mapHTML+= country_name+' '+'<span class=\"flag flag-'+country_name.toLowerCase()+'" style="margin-right: 10px;"></span>';
+    }
+    return mapHTML + '<br/></p>'
+  } 
