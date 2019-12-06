@@ -12,13 +12,16 @@
             <i class="icon-square icon-bgwhite icon-pencil icon-2x"></i>
           </a>
         </div>
-        <% if current_user %>
+        <% if !@current_user.photo_link || @current_user.photo_link.empty? %>
           <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
         <% else %>
           <%= image_tag(@current_user.photo_link, :alt => "profile picture", :class => "img-responsive img-pfp") %>
         <% end %>
         <h1><%= @current_user.first_name + " " + @current_user.last_name %></h1>
         <p><strong>Email: </strong> <%= @current_user.email %> </p>
+        <p><strong>Occupation: </strong> <%= @current_user.profession %> </p>
+        <p><strong>LinkedIn: </strong> <%= @current_user.linkedin %> </p>
+        <p><strong>Organization: </strong> <%= @current_user.organization %> </p>
         <p><strong>Location: </strong> <%= @current_user.location %> </p>
         <p><strong>Country of origin : </strong> <%= @current_user.country_of_origin %> </p>
         <p><%= @current_user.map_visibility ? '' : 'Not' %> Visible on Map</p>

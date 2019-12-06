@@ -5,7 +5,11 @@
       <div class="profile-header">
         <h3>Edit Profile</h3>
       </div>
-      <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
+      <% if !@current_user.photo_link || @current_user.photo_link.empty? %>
+        <%= image_tag("profile_default.jpg", :alt => "default profile picture", :class => "img-responsive img-pfp") %>
+      <% else %>
+        <%= image_tag(@current_user.photo_link, :alt => "profile picture", :class => "img-responsive img-pfp") %>
+      <% end %>
 
       <div class="row profile-form">
         <div class="span">
@@ -31,6 +35,46 @@
           <%= text_field :current_user, :last_name %>
         </div>
       </div>
+
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :email, 'Email' %>
+        </div>
+        <div class="span3">
+          <%= text_field :current_user, :email %>
+        </div>
+      </div>
+
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :profession, 'Occupation' %>
+        </div>
+        <div class="span3">
+          <%= select :current_user,
+                     :profession,
+                     ["Student", "Professor", "Professional", "Other"] %>
+        </div>
+      </div>
+
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :linkedin, 'LinkedIn' %>
+        </div>
+        <div class="span3">
+          <%= text_field :current_user, :linkedin %>
+        </div>
+      </div>
+
+      <div class="row profile-form">
+        <div class="span">
+          <%= label :current_user, :organization, 'Organization' %>
+        </div>
+        <div class="span3">
+          <%= text_field :current_user, :organization %>
+        </div>
+      </div>
+
+
       <div class="row profile-form">
         <div class="span">
           <%= label :current_user, :location, 'Current City' %>
