@@ -55,9 +55,21 @@ var otherIcon = L.icon({
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc
       + '></p><h4 style="text-align:center">'+name+'</h4>';
       p.innerHTML+= createMapHTML(thisUser.country_of_origin.split(" "));
-      p.innerHTML+= '<p align="center" style="font-size:130%;">'+thisUser.profession+' @'+thisUser.organization+'</a></p>';
-      p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
-      +'<a target="blank" href=mailto:'+thisUser.email+' class="edit-profile"><i class="icon-square icon-envelope icon-2x"></i></a></div>';
+      let userProf = ""
+      let userOrg = ""
+      if (thisUser.profession != null && thisUser.profession != "") {
+        userProf = thisUser.profession
+      }
+      if (thisUser.organization != null && thisUser.organization != "") {
+        userOrg = ' @ ' + thisUser.organization
+      }
+      p.innerHTML+= '<p align="center" style="font-size:130%;">'+userProf+userOrg+'</a></p>';
+      if (thisUser.linkedin != null && thisUser.linkedin != "") {
+        p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
+        +'<a target="blank" href=mailto:'+thisUser.email+' class="edit-profile"><i class="icon-square icon-envelope icon-2x"></i></a></div>';
+      } else {
+          p.innerHTML+= '<div align="center"><a target="blank" href=mailto:'+thisUser.email+' class="edit-profile"><i class="icon-square icon-envelope icon-2x"></i></a></div>';
+      }
       marker.bindPopup(p).openPopup();
     }
 
