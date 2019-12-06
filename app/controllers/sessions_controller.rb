@@ -2,8 +2,8 @@ class SessionsController < ApplicationController
   def create
     user = User.validate_and_create(env["omniauth.auth"])
     if user.nil?
-      flash[:error] = "Login unsuccessful: Please use " \
-                      "the same email that you use for " \
+      flash[:error] = "Login unsuccessful: Please email " \
+                      "members@hispanicsincomputing.org to join " \
                       "the Hispanics in Engineering Slack group"
     else
       session[:id] = user.id
