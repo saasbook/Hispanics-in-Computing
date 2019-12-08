@@ -4,7 +4,7 @@
 
 <p align="center"><i>CS 169 Group 9 Fall 2019</i></p>
 <p align="center">
-  <img src="/app/assets/image/readme/home.png"  height="300">
+  <img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/home.png"  height="300">
 </p>
 <p align="center">Special Thanks to Professor Nery Chapeton Lamas</p>
 
@@ -51,7 +51,7 @@ View of a side-by-side comparison of the old home page content and new home page
 
 Before | After
 --- | ---
-![]("/app/assets/image/readme/full-old.png") | ![]("/app/assets/image/readme/full-new.png")
+<img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/full-old.png"  height="300"> | <img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/full-new.png"  height="500"> 
 
 ### Portal
 
@@ -59,7 +59,7 @@ Use of OmniAuth for Google login and flash messages to show login status.
 
 On login | On logout
 --- | ---
-![]("/app/assets/image/readme/on-login.png") | ![]("/app/assets/image/readme/on-logout.png")
+<img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/on-login.png"  height="200"> | <img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/on-logout.png"  height="200"> 
 
 ## Demos
 
