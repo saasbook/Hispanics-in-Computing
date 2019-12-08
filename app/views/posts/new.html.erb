@@ -90,8 +90,11 @@
         <div class="span3">
           <%= country_select :current_user,
                              :country_of_origin,
-                             :include_blank => 'Select Country',
-                             :selected => current_user.country_of_origin %>
+                             {:include_blank => 'Select Country/Countries',
+                             :selected => current_user.country_of_origin_to_array},
+                             {:multiple => true,
+                              "data-toggle"=>"tooltip",
+                              "title"=>"Hold ctrl and click to choose multiple countries"} %>
         </div>
       </div>
       <div class="row profile-form">

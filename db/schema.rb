@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20191204190322) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                             null: false
     t.string   "location"
-    t.string   "country_of_origin"
+    t.text     "country_of_origin", default: ""
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "first_name"

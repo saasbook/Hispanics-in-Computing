@@ -88,3 +88,4 @@ var otherIcon = L.icon({
     }
     return mapHTML + '<br/></p>'
   }
+;
