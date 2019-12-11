@@ -45,24 +45,37 @@ var otherIcon = L.icon({
           myIcon = otherIcon;
           break;
       }
-      var marker = L.marker(gon.locations[i], {icon: myIcon}).addTo(mymap);
+      let userCoords = gon.locations[i]
+      let offset0 = Math.random()/75;
+      let offset1 = Math.random()/75;
+      let switch0 = Math.random();
+      let switch1 = Math.random();
+      if (switch0 >= 0.5) {
+        offset0 = -offset0;
+      };
+      if (switch1 >= 0.5) {
+        offset1 = -offset1;
+      };
+      userCoords[0] = userCoords[0] + offset0
+      userCoords[1] = userCoords[1] + offset1
+      var marker = L.marker(userCoords, {icon: myIcon}).addTo(mymap);
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
-      let imgSrc = "/assets/images/profile_default.jpg";
+      let imgSrc = "/assets/profile_default.jpg";
       if (thisUser.photo_link != null && thisUser.photo_link.length > 5) {
         imgSrc = thisUser.photo_link
-      }
+      };
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc
       + '></p><h4 style="text-align:center">'+name+'</h4>';
       p.innerHTML+= createMapHTML(thisUser.country_of_origin.split(" "));
-      let userProf = ""
-      let userOrg = ""
+      let userProf = "";
+      let userOrg = "";
       if (thisUser.profession != null && thisUser.profession != "") {
         userProf = thisUser.profession
-      }
+      };
       if (thisUser.organization != null && thisUser.organization != "") {
         userOrg = ' @ ' + thisUser.organization
-      }
+      };
       p.innerHTML+= '<p align="center" style="font-size:130%;">'+userProf+userOrg+'</a></p>';
       if (thisUser.linkedin != null && thisUser.linkedin != "") {
         p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
