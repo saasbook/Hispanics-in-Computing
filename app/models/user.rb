@@ -41,6 +41,10 @@ class User < ActiveRecord::Base
   end
 
   def country_of_origin_to_array
-    self.country_of_origin.split(" ")
+    if self.country_of_origin.nil?
+      return []
+    else
+      return self.country_of_origin.split(" ")
+    end
   end
 end
