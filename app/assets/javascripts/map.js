@@ -45,24 +45,28 @@ var otherIcon = L.icon({
           myIcon = otherIcon;
           break;
       }
-      var marker = L.marker(gon.locations[i], {icon: myIcon}).addTo(mymap);
+      let offset = Math.random()/10;
+      var offsetCoords = gon.locations[i].map(function(element) {
+	       return element*offset;
+       });
+      var marker = L.marker(offsetCoords, {icon: myIcon}).addTo(mymap);
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
-      let imgSrc = "/assets/images/profile_default.jpg";
+      let imgSrc = "/assets/profile_default.jpg";
       if (thisUser.photo_link != null && thisUser.photo_link.length > 5) {
         imgSrc = thisUser.photo_link
-      }
+      };
       p.innerHTML = '<p align="center"><img class="map-pfp" src='+ imgSrc
       + '></p><h4 style="text-align:center">'+name+'</h4>';
       p.innerHTML+= createMapHTML(thisUser.country_of_origin.split(" "));
-      let userProf = ""
-      let userOrg = ""
+      let userProf = "";
+      let userOrg = "";
       if (thisUser.profession != null && thisUser.profession != "") {
         userProf = thisUser.profession
-      }
+      };
       if (thisUser.organization != null && thisUser.organization != "") {
         userOrg = ' @ ' + thisUser.organization
-      }
+      };
       p.innerHTML+= '<p align="center" style="font-size:130%;">'+userProf+userOrg+'</a></p>';
       if (thisUser.linkedin != null && thisUser.linkedin != "") {
         p.innerHTML+= '<div align="center"><a target="blank" href='+thisUser.linkedin+' class="edit-profile"><i class="icon-square icon-linkedin icon-2x"></i></a>'
