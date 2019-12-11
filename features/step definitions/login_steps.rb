@@ -1,8 +1,8 @@
 Given /I am (not )?a member of the slack group/ do |not_member|
   if not_member
-    User.stub(:valid_user).and_return(false)
+    User.stub(:valid_user?).and_return(false)
   else
-    User.stub(:valid_user).and_return(true)
+    User.stub(:valid_user?).and_return(true)
   end
 end
 
