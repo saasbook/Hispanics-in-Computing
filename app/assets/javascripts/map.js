@@ -45,11 +45,20 @@ var otherIcon = L.icon({
           myIcon = otherIcon;
           break;
       }
-      let offset = Math.random()/10;
-      var offsetCoords = gon.locations[i].map(function(element) {
-	       return element*offset;
-       });
-      var marker = L.marker(offsetCoords, {icon: myIcon}).addTo(mymap);
+      let userCoords = gon.locations[i]
+      let offset0 = Math.random()/75;
+      let offset1 = Math.random()/75;
+      let switch0 = Math.random();
+      let switch1 = Math.random();
+      if (switch0 >= 0.5) {
+        offset0 = -offset0;
+      };
+      if (switch1 >= 0.5) {
+        offset1 = -offset1;
+      };
+      userCoords[0] = userCoords[0] + offset0
+      userCoords[1] = userCoords[1] + offset1
+      var marker = L.marker(userCoords, {icon: myIcon}).addTo(mymap);
       p = document.createElement("p");
       let name = thisUser.first_name+' '+thisUser.last_name;
       let imgSrc = "/assets/profile_default.jpg";
