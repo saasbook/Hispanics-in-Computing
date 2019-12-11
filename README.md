@@ -62,6 +62,10 @@ On login | On logout
 <img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/on-login.png"  height="200"> | <img src="https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/app/assets/images/readme/on-logout.png"  height="200"> 
 
 ## Demos
+Final Screencast to be updated
+
+## Development 
+See [Readme.rdoc](https://github.com/CS169-Group9/Hispanics-in-Computing/blob/master/README.rdoc)
 
 
 ## Gem Dependencies
