@@ -5,20 +5,24 @@ describe User do
     # Global stub for Geocoder
     allow(Geocoder).to receive(:search).and_return(["item"])
   end
-  describe ".valid_user" do
+  describe ".valid_user?" do
     before(:all) do
       @email = "bob@gmail.com"
     end
     context "given a user who is in the slack group" do
+      before(:each) do
+        @client = double("client")
+        expect(Slack::Web::Client).to receive(:new).and_return(@client)
+      end
       it "returns true" do
-        expect(User).to receive(:slack_member_emails).and_return([@email])
-        expect(User.valid_user(@email)).to be true
+        expect(@client).to receive(:users_lookupByEmail)
+        expect(User.valid_user?(@email)).to be true
       end
     end
     context "given a user who is not in the slack group" do
       it "returns false" do
-        expect(User).to receive(:slack_member_emails).and_return(["alice@gmail.com"])
-        expect(User.valid_user(@email)).to be false
+        allow(@client).to receive(:users_lookupByEmail).and_raise(Slack::Web::Api::Errors::SlackError.new("error"))
+        expect(User.valid_user?(@email)).to be false
       end
     end
   end
@@ -35,7 +39,7 @@ describe User do
     end
     context "given a user who is in the slack group" do
       before(:each) do
-        allow(User).to receive(:slack_member_emails).and_return([@email])
+        allow(User).to receive(:valid_user?).and_return(true)
       end
       it "creates a user object in the database" do
         expect{User.validate_and_create(@auth_hash)}.to change{User.count}.by(1)
@@ -50,7 +54,7 @@ describe User do
     end
     context "given a user who is not in the slack group" do
       before(:each) do
-        allow(User).to receive(:slack_member_emails).and_return([])
+        allow(User).to receive(:valid_user?).and_return(false)
       end
       it "saves nothing to the database" do
         expect{User.validate_and_create(@auth_hash)}.to change{User.count}.by(0)
@@ -103,6 +107,10 @@ describe User do
     end
     it "returns an empty array when country of origin is the empty string" do
       user = User.new(:email => "bob@gmail.com", :country_of_origin => "")
+      expect(user.country_of_origin_to_array).to eq([])
+    end
+    it "returns an empty array when country of origin is nil" do
+      user = User.new(:email => "bob@gmail.com", :country_of_origin => nil)
       expect(user.country_of_origin_to_array).to eq([])
     end
   end
