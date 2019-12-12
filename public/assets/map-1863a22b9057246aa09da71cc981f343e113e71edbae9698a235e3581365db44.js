@@ -171,3 +171,4 @@
     }
     return mapHTML + '<br/></p>'
 }
+;
