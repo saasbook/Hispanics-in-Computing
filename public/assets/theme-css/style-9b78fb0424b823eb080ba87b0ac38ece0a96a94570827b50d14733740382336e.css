@@ -1,0 +1,1430 @@
+/*
+    Theme Name: Maxim
+    Theme URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+		Edited by: CS 169 Group 9
+*/
+/*
+===========================
+CONTENTS:
+
+01 General
+02 Typography
+03 Non-semantic
+04 Navbar
+05 Page sections
+06 Footer
+07 Icons
+08 Buttons
+09 Media queries
+===========================
+*/
+/* Import css */
+/* Google font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500&display=swap");
+/* bootstrap */
+@import url("bootstrap.css");
+/* bootstrap responsive */
+@import url("bootstrap-responsive.css");
+/* prettyPhoto */
+@import url("prettyPhoto.css");
+/* flexslider */
+@import url("flexslider.css");
+/* font awesome */
+@import url("font-awesome.css");
+/* overwrite */
+@import url("overwrite.css");
+/* animation */
+@import url("animate.css");
+/* =========================================================
+01. General
+============================================================ */
+/* line 51, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+div, article, section, header, footer, nav, li {
+  position: relative;
+}
+
+/* line 54, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.group:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  /* For clearing */
+}
+
+/* line 61, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+body {
+  background: white;
+  color: #444;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* line 69, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+body {
+  padding-top: 60px;
+  /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+/* line 73, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+::-moz-selection {
+  color: #333;
+}
+
+/* line 76, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+::selection {
+  color: #333;
+}
+
+/* scroll to top */
+/* line 81, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.scrollup {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* line 89, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+a.scrollup {
+  outline: 0;
+  text-decoration: none;
+}
+
+/* line 94, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+a.scrollup:hover, a.scrollup:active, a.scrollup:focus {
+  opacity: 1;
+  text-decoration: none;
+  -webkit-transition: all 400ms ease-out 0s;
+  -moz-transition: all 400ms ease-out 0s;
+  -o-transition: all 400ms ease-out 0s;
+  transition: all 400ms ease-out 0s;
+}
+
+/* line 102, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+a.scrollup i:hover {
+  text-decoration: none;
+}
+
+/* line 106, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.blankdivider10 {
+  height: 10px;
+  display: block;
+}
+
+/* line 111, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.blankdivider20 {
+  height: 20px;
+  display: block;
+}
+
+/* line 115, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.blankdivider30 {
+  height: 30px;
+  display: block;
+}
+
+/* line 120, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.row {
+  margin-bottom: 30px;
+}
+
+/* line 124, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.row .row {
+  margin-bottom: 30px;
+}
+
+/* line 128, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.row.nomargin {
+  margin-bottom: 0;
+}
+
+/*---------- forms ----------*/
+/* line 135, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+input[type=text], input[type=submit], textarea {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 144, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+input, button, select, textarea {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* =========================================================
+02. Typography
+============================================================ */
+/* line 151, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+p {
+  line-height: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+/* line 156, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote {
+  font-size: 18px;
+  border: none;
+  padding: 0 5em 0 5em;
+}
+
+/* line 162, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote.small {
+  line-height: 1.1em;
+  font-style: oblique;
+}
+
+/* line 166, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote.small:before {
+  font-size: 18px;
+  font-family: FontAwesome;
+  content: "\f10d";
+  margin-right: 20px;
+}
+
+/* line 173, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote cite {
+  display: block;
+  font-size: 12px;
+}
+
+/* line 174, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+
+/* line 175, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+blockquote cite a,
+blockquote cite a:visited,
+blockquote cite a:visited {
+  color: #555;
+}
+
+/* line 179, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul, ol {
+  font-size: 1em;
+  /* 16px */
+  line-height: 1.5;
+  /* 24px */
+  margin: 0 0 1.5em 0;
+}
+
+/* line 187, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 191, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/* line 194, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #312f2b;
+  line-height: 1.1em;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* line 200, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* line 204, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* line 208, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* line 212, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* line 216, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* line 220, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h6 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* line 224, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+strong {
+  font-weight: 700;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* line 228, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+small {
+  font-size: 0.75em;
+  /* 12px */
+  line-height: 2;
+  /* 24px */
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+/* line 234, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+em {
+  font-style: normal;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* line 238, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.muted {
+  color: #A5A5A2;
+}
+
+/* line 241, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.impressed {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.9);
+  /* highlight */
+}
+
+/* line 246, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+h2.pagetitle {
+  color: #fff;
+  font-size: 46px;
+}
+
+/* =========================================================
+03. Misc
+============================================================ */
+/* line 255, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+/* line 261, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.alignright {
+  text-align: right;
+}
+
+/* line 264, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.alignleft {
+  text-align: left;
+}
+
+/* line 267, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.aligncenter {
+  text-align: center;
+}
+
+/* line 270, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.medium {
+  font-weight: normal;
+}
+
+/* =========================================================
+04. Navigation
+============================================================ */
+/* line 278, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-fixed-top .container {
+  /* Uncomment to make nav expand full width */
+  /*	width: auto; */
+}
+
+/* line 282, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar .brand {
+  margin-left: 0;
+  padding: 0;
+  margin-top: 1.2em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 200;
+}
+
+/* line 289, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar .brand a {
+  padding: 0;
+  color: white;
+  font-size: 1em;
+  margin-left: 0;
+  font-weight: 400;
+}
+
+/* line 296, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar .brand a:hover {
+  text-decoration: none;
+  transition: color .15s linear;
+  -webkit-transition: color .15s linear;
+  -moz-transition: color .15s linear;
+}
+
+/* line 302, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar .brand a:focus {
+  outline: none;
+}
+
+/* line 305, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-inner {
+  min-height: 4.75em;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* line 309, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-inverse .navbar-inner {
+  background-repeat: repeat;
+  background-color: white;
+}
+
+/* line 313, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-wrapper {
+  overflow: hidden;
+}
+
+/* line 316, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#menu-main {
+  margin-top: 1.125em;
+}
+
+/* line 319, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul#menu-main > li > a {
+  font-weight: 600;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 325, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul#menu-main > li > a:hover {
+  padding: 9px 15px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+/* line 331, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul#menu-main > li > a:focus {
+  outline: 0;
+}
+
+/* line 335, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.nav-outer-tapia {
+  padding: 9px 15px 10px;
+}
+
+/* line 339, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.nav-tapia {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 346, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.nav-tapia:hover {
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+/* line 352, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.nav-tapia a:visited, a:active, a:focus {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 357, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+  text-shadow: none;
+}
+
+/* line 361, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul#tapia-menu > li > a {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: black;
+}
+
+/* line 368, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+ul#tapia-menu > li > a:hover {
+  background-color: #ffff00;
+  color: black;
+}
+
+/* =========================================================
+05. Page sections
+============================================================ */
+/* === section header === */
+/* line 380, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper {
+  width: 100%;
+  min-height: 600px;
+  margin-top: -60px;
+  padding-top: 160px;
+  text-align: center;
+}
+
+/* line 388, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-container {
+  width: 90%;
+  padding: 5em 0 3em;
+  text-align: right;
+}
+
+/* line 394, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-container p {
+  margin-top: .3em;
+}
+
+/* line 398, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-weight: 400;
+  margin: 1em 0;
+}
+
+/* line 404, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper h2 {
+  color: #fff;
+  font-family: 'Open Sans', sans serif;
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0.5em 0;
+  text-shadow: 1px 1px 1px #333333;
+}
+
+/* line 413, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+header .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- Header slider --- */
+/* line 419, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper.header-slider {
+  background: url("/assets/2018-7347f46443f29d9fe4e8f7b0c1596e2a94592f2b6f1247b5e4f9ead8f2cedaf3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 427, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#main-flexslider ul.slides li p {
+  font-size: 72px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0px;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+}
+
+/* line 436, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#main-flexslider.flexslider {
+  margin: 0;
+  background: none;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+}
+
+/* --- Header subscribe form --- */
+/* line 454, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper input[type=text] {
+  background: #e3e7e4;
+  font-family: 'Open Sans', sans serif;
+  font-size: 1.3125em;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0 !important;
+}
+
+/* line 463, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper input[type=text]:focus {
+  background: #43413e;
+  color: #eff1ef;
+  transition: background 0.25 ease-in;
+  -moz-transition: background 0.25 ease-in;
+  -webkit-transition: background 0.25 ease-in;
+}
+
+/* line 470, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper input[type=text] {
+  height: 2.9em;
+  width: 50%;
+}
+
+/* line 474, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper input[type=submit] {
+  color: #fff;
+  width: 185px;
+  height: 2.9em;
+  font-size: 1.3125em;
+  /* 21px */
+  padding: 0.5em;
+  letter-spacing: 0.05em;
+  margin: 0;
+  border: 0;
+  text-transform: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/* line 488, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+#header-wrapper input[type=submit]:hover, #header-wrapper input[type=submit]:active {
+  background: #43413e !important;
+}
+
+/* line 493, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section.section {
+  padding: 50px 0 30px;
+}
+
+/* line 496, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section.section h4 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+/* line 503, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section.section h1 {
+  font-size: 18px;
+  font-family: 'Open Sans', sans serif;
+  text-align: center;
+}
+
+/* line 508, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section.section p {
+  font-size: 18px;
+  font-family: 'Open Sans', sans serif;
+  text-align: center;
+}
+
+/* line 513, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section.inner {
+  padding: 50px;
+}
+
+/* line 519, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.section.orange h4, .section.green h4 {
+  color: #fcfcfc;
+}
+
+/* line 522, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.section.orange p, .section.green p {
+  color: #f7f7f7;
+}
+
+/* === section about === */
+/* line 528, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section#about {
+  background: #f2f2f2;
+}
+
+/* === section about === */
+/* line 535, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section#members {
+  text-align: center;
+}
+
+/* line 539, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+section#members > .login-wrapper {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  padding: 50px 30px;
+  width: 90%;
+  max-width: 470px;
+  position: relative;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+06. Footer
+============================================================ */
+/* line 556, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer {
+  background: #2b2b2b;
+  text-align: center;
+  color: #ddd;
+  padding: 5em 0 0.5em;
+}
+
+/* line 563, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer h4 {
+  color: white;
+  font-size: 32px;
+}
+
+/* line 568, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer a {
+  color: #ddd;
+}
+
+/* line 572, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer a:hover {
+  color: #fff;
+}
+
+/* line 576, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks {
+  list-style: none;
+  padding: 2em 0 2em;
+}
+
+/* line 581, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li {
+  display: inline;
+}
+
+/* line 585, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li i {
+  display: inline-block;
+}
+
+/* line 589, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a {
+  color: #5e5e5e;
+  margin: 0 5px;
+}
+
+/* line 594, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* line 603, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li i.icon-bgdark {
+  background: #414141;
+  color: #656565;
+}
+
+/* line 609, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a i.icon-facebook:hover {
+  background: #0099ff;
+  color: #fff;
+}
+
+/* line 614, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a i.icon-twitter:hover {
+  background: #5ad2eb;
+  color: #fff;
+}
+
+/* line 618, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a i.icon-linkedin:hover {
+  background: #005c99;
+  color: #fff;
+}
+
+/* line 622, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+footer ul.social-networks li a i.icon-envelope:hover {
+  background: #0099cc;
+  color: #fff;
+}
+
+/* =========================================================
+07. Icons
+============================================================ */
+/* bg */
+/* line 635, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bglight {
+  color: #444;
+  background: #f7f7f7;
+}
+
+/* line 639, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bglight.active {
+  color: #fff;
+}
+
+/* line 643, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bglight.active:hover {
+  color: #444;
+  background: #f7f7f7;
+}
+
+/* line 648, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bgdark {
+  color: #f7f7f7;
+  background: #333;
+}
+
+/* line 652, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bgdark:hover {
+  color: #fff;
+}
+
+/* line 655, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-bgdark.active:hover {
+  color: #f7f7f7;
+  background: #333;
+}
+
+/* square */
+/* line 661, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-square {
+  display: inline-block;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+/* line 668, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-square.icon-2x {
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+/* line 673, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-square.icon-3x {
+  width: 72px !important;
+  height: 72px !important;
+  line-height: 72px !important;
+}
+
+/* line 678, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-square.icon-4x {
+  width: 96px !important;
+  height: 96px !important;
+  line-height: 96px !important;
+}
+
+/* line 683, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-square.icon-5x {
+  width: 120px !important;
+  height: 120px !important;
+  line-height: 120px !important;
+}
+
+/* rounded */
+/* line 690, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-rounded {
+  display: inline-block;
+  border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+/* line 703, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-rounded.icon-2x {
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+/* line 708, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-rounded.icon-3x {
+  width: 72px !important;
+  height: 72px !important;
+  line-height: 72px !important;
+  border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+}
+
+/* line 718, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-rounded.icon-4x {
+  width: 96px !important;
+  height: 96px !important;
+  line-height: 96px !important;
+  border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+}
+
+/* line 728, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-rounded.icon-5x {
+  width: 120px !important;
+  height: 120px !important;
+  line-height: 120px !important;
+  border-radius: 12px !important;
+  -moz-border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+  -o-border-radius: 12px !important;
+  -ms-border-radius: 12px !important;
+}
+
+/* circled */
+/* line 741, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-circled {
+  display: inline-block;
+  border-radius: 1000px !important;
+  -moz-border-radius: 1000px !important;
+  -webkit-border-radius: 1000px !important;
+  -o-border-radius: 1000px !important;
+  -ms-border-radius: 1000px !important;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+/* line 754, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-circled.icon-2x {
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+/* line 759, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-circled.icon-3x {
+  width: 72px !important;
+  height: 72px !important;
+  line-height: 72px !important;
+}
+
+/* line 764, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-circled.icon-4x {
+  width: 96px !important;
+  height: 96px !important;
+  line-height: 96px !important;
+}
+
+/* line 769, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-circled.icon-5x {
+  width: 120px !important;
+  height: 120px !important;
+  line-height: 120px !important;
+}
+
+/* line 775, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+i.icon-white {
+  color: #fff;
+}
+
+/* more icon sizes for font-awesome icons */
+/* line 782, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x {
+  font-size: 6em;
+}
+
+/* line 785, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x.icon-border {
+  border-width: 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 792, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-7x {
+  font-size: 7em;
+}
+
+/* line 795, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x.icon-border {
+  border-width: 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 802, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-8x {
+  font-size: 8em;
+}
+
+/* line 805, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x.icon-border {
+  border-width: 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 812, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-9x {
+  font-size: 9em;
+}
+
+/* line 815, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x.icon-border {
+  border-width: 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 821, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-10x {
+  font-size: 10em;
+}
+
+/* line 824, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.icon-6x.icon-border {
+  border-width: 6px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* =========================================================
+08. Buttons
+============================================================ */
+/* line 837, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn {
+  color: #fff;
+  text-shadow: none;
+  font-size: 16px;
+  padding: 11px 19px;
+  letter-spacing: 0.05em;
+  border: 0;
+  text-transform: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: #545454;
+  border-color: none;
+  *background-color: #545454;
+  background-image: none;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: none;
+  border: none;
+  *border: 0;
+  border-bottom-color: none;
+}
+
+/* line 861, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn:link, .btn:visited {
+  color: #fff;
+}
+
+/* line 864, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn:hover {
+  background: #333 !important;
+}
+
+/* line 867, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #fff;
+  background-color: #333;
+  *background-color: #333;
+}
+
+/* line 879, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn.btn-theme:hover {
+  background: #333 !important;
+}
+
+/* size */
+/* line 884, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-large {
+  padding: 18px 25px;
+  font-size: 24px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 892, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+/* line 897, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-small {
+  padding: 6px 13px;
+  font-size: 11.9px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 905, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+
+/* line 910, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+/* line 915, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-mini {
+  padding: 0 6px;
+  font-size: 10.5px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* end size */
+/* line 925, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-primary {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #09828c;
+  *background-color: #09828c;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 935, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background: #065158;
+  *background-color: #065158;
+}
+
+/* line 946, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #065158 \9;
+}
+
+/* line 951, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-warning {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #ffe873;
+  *background-color: #ffe873;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 961, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  color: #ffffff;
+  background: #b88f22;
+  *background: #b88f22;
+}
+
+/* line 972, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-warning:active,
+.btn-warning.active {
+  background: #b88f22 \9;
+}
+
+/* line 978, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-danger {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #f36f36;
+  *background-color: #f36f36;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 988, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  color: #ffffff;
+  background: #db5f58;
+  *background: #db5f58;
+}
+
+/* line 999, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-danger:active,
+.btn-danger.active {
+  background: #db5f58 \9;
+}
+
+/* line 1004, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-success {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #1bac91;
+  *background-color: #1bac91;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 1014, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  color: #ffffff;
+  background: #55ba93;
+  *background: #55ba93;
+}
+
+/* line 1025, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-success:active,
+.btn-success.active {
+  background: #55ba93 \9;
+}
+
+/* line 1030, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-info {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #4dbdc6;
+  *background-color: #4dbdc6;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 1040, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  color: #ffffff;
+  background: #6a9ad0;
+  *background: #6a9ad0;
+}
+
+/* line 1051, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-info:active,
+.btn-info.active {
+  background: #6a9ad0 \9;
+}
+
+/* line 1056, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-inverse {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #3c3c3c;
+  *background-color: #3c3c3c;
+  background-image: none;
+  border-color: none;
+  filter: none;
+}
+
+/* line 1066, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  color: #ffffff;
+  background: #2b2a2a;
+  *background: #2b2a2a;
+}
+
+/* line 1077, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-inverse:active,
+.btn-inverse.active {
+  background: #2b2a2a \9;
+}
+
+/* button flat */
+/* line 1084, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-flat {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* button rounded */
+/* line 1091, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-rounded {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+/* line 1096, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.btn-large.btn-rounded {
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+}
+
+/* line 1103, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+.navbar-inverse .btn-navbar {
+  width: auto;
+  height: auto;
+}
+
+/* =========================================================
+09. Media queries
+============================================================ */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 1115, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0;
+  }
+
+  /* line 1121, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  /* line 1126, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner h1.brand {
+    margin-left: 20px;
+  }
+
+  /* line 1130, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner .btn-navbar {
+    margin: 20px 20px 0;
+  }
+
+  /* line 1134, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  /* line 1138, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inverse .navbar-inner {
+    padding: 0 0 30px;
+  }
+
+  /* line 1142, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .nav-collapse {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1150, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0;
+  }
+
+  /* line 1155, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  /* line 1160, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner h1.brand {
+    margin-left: 20px;
+  }
+
+  /* line 1164, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inner .btn-navbar {
+    margin: 20px 20px 0;
+  }
+
+  /* line 1168, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  /* line 1172, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .navbar-inverse .navbar-inner {
+    padding: 0 20px 30px;
+  }
+
+  /* line 1176, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .nav-collapse {
+    text-align: center;
+    width: 100%;
+  }
+}
+/* Smaller screens ----------- */
+@media (max-width: 480px) {
+  /* line 1184, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  #header-wrapper {
+    padding-top: 80px;
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* line 1193, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  section.section {
+    padding: 1em 0;
+  }
+
+  /* line 1197, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .max-img {
+    width: 100%;
+  }
+
+  /* line 1200, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/theme-css/style.scss */
+  .max-img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+}

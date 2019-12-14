@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Interactive Members Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <%= stylesheet_link_tag "map" %>
+    <%= include_gon(:init => true) %>
+  </head>
+  <body class="map">
+  <!-- Header area -->
+   <div class="header">
+      <h1 style="text-align:center">Interactive Members Map</h1>
+   </div>
+   <div id="map-container">
+     <div id="leaflet-map"></div>
+     <p style="text-align:right">Current number of members: <%= @user_num %></p>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+  <%= javascript_include_tag "map" %>
+  </body>
+</html>

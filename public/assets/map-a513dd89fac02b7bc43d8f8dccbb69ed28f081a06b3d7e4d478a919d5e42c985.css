@@ -1,0 +1,12 @@
+/* line 5, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/map.scss */
+div#map-container {
+  background: #f2f2f2;
+  padding-top: 2em;
+}
+
+/* line 11, /Users/monlily03/Desktop/cs169/Hispanics-in-Computing/app/assets/stylesheets/map.scss */
+div#leaflet-map {
+  height: 500px;
+  background: #f2f2f2;
+  padding-top: 2em;
+}

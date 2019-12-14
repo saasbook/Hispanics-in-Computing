@@ -1,0 +1,34 @@
+== README
+
+=== In Development
+
+After forking the repo, 
+
+* run `bundle install`
+* export the given environment variables
+  * GOOGLE_CLIENT_ID
+  * GOOGLE_SECRET
+  * SLACK_API_TOKEN
+* run `rake db:reset`
+* run `rake db:migrate`
+* run `rake db:reset` and `rake db:seed` if you wish to have a few example map pins
+
+=== Deployment instructions
+
+* add any new js or css files from html.erb references in `config/initializers/assets.rb`
+  * example: `Rails.application.config.assets.precompile += %w( example.css )`
+* run `bundle exec rake assets:precompile RAILS_ENV=production` to regenerate assets
+* run `rails s` at least once after all code changes
+* `heroku push origin master`
+
+=== Adding a new Tapia Page
+
+* Inside of config/routes.rb add a route to the new Tapia Page. This will add a new URL whose path is `/tapia<YEAR>`
+   get  'tapia<YEAR>'   => 'hispanicsincomputing#tapia_<YEAR>',  :as => 'conference_<YEAR>'
+* Inside of app/views/layouts/application.html.erb add a link to a new Tapia Page under the Tapia dropdown
+   <li><%= link_to "TAPIA <YEAR>", conference_<YEAR>_path %></li>
+* Inside of app/controllers/hispanicsinengineering.rb add a new method: 
+   def tapia_<YEAR> 
+   end
+* Create a new html.erb file inside of app/views/hispanicsincomputing named `tapia_<YEAR>.html.erb` and add html for the page in this file.
+  
