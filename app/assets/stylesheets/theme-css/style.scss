@@ -199,6 +199,10 @@ input[type=text], input[type=submit], textarea {
 input, button, select, textarea {
 	font-family:'Open Sans', Arial, sans-serif;
 }
+
+select#current_user_country_of_origin {
+	resize: both;
+}
 /* =========================================================
 02. Typography
 ============================================================ */
